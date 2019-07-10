@@ -6,17 +6,14 @@ class TestController extends CI_Controller {
     public function index()
     {
         $this->load->view('Header');
-        $this->load->view('Test');
+        $this->load->view('Login');
         $this->load->view('Footer');
-        
-        
+     
     }
     public function login()
     {
         $user =  $this->input->post('usertxt');
         $pass =  $this->input->post('passtxt'); 
-        echo $user;
-        echo $pass;
 
         $this->db->where('username', $user);
         $this->db->where('password', $pass);
@@ -49,7 +46,6 @@ class TestController extends CI_Controller {
         
         
     }
-
 }
 
 /* End of file TestController.php */
