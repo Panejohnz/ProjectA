@@ -14,7 +14,19 @@ class RegisController extends CI_Controller {
 
     public function Register()
     {
+            $email = $this->input->post('email');
 
+
+            $this->db->where('email', $email);
+            $emailja =  $this->db->get('users',1);
+            
+            if($emailja->num_rows() > 0){
+                echo '<script language="javascript">';
+                echo 'alert("ไอหมอนี่มันคิดเองไม่เป็นว่าไอห่า")';
+                echo '</script>';
+            }
+            else{
+        
             //Setting values for tabel columns
             $data = array(
             'firsname' => $this->input->post('firstname'),
@@ -27,9 +39,8 @@ class RegisController extends CI_Controller {
             $this->load->model('insert_users');
             
             $this->insert_users->insert($data);
-            echo 'Data Inserted Successfully';
-    
-            
+            $this->load->view('aaa');
+        }
             
             
             

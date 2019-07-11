@@ -1,9 +1,8 @@
-    
     <body>
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1);">
+				<div class="login100-pic js-tilt" data-tilt>
 					<img src="<?php echo base_url(); ?>./assets/images/img-01.png" alt="IMG">
 				</div>
 
@@ -34,10 +33,17 @@
 						</button>
 					</div>
 
-					
-
 					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
 						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="<?php echo site_url("RegisController");?>">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>

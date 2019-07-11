@@ -8,6 +8,7 @@ class TestController extends CI_Controller {
         $this->load->view('Header');
         $this->load->view('Login');
         $this->load->view('Footer');
+       
      
     }
     public function login()
@@ -52,17 +53,15 @@ class TestController extends CI_Controller {
                 echo '<script language="javascript">';
                 echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
                 echo '</script>';
-            }else
-            {
-                echo '<script language="javascript">';
-                echo 'alert("โง่ไอหน้าหีไม่มีรหัสแล้วเสือกกระแดะเข้า")';
-                echo '</script>';
             }
-        }else 
+            else
+            {
+                $this->load->view('bbb');
+            }
+        }
+        else 
         {
-            echo '<script language="javascript">';
-            echo 'alert("โง่ไอหน้าหีไม่มีรหัสแล้วเสือกกระแดะเข้า")';
-            echo '</script>';
+          $this->load->view('bbb');
         }
         exit;
         
