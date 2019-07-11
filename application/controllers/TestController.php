@@ -13,7 +13,6 @@ class TestController extends CI_Controller {
     }
     public function Login()
     {
-        
         $username =  $this->input->post('usertxt');
         $pass =  $this->input->post('passtxt'); 
 
@@ -36,7 +35,6 @@ class TestController extends CI_Controller {
             redirect('/IndexController','refresh');*/
             
         }
-    
         if($user->num_rows() == 0){
             $this->db->where('email', $username);
             $this->db->where('password', $pass);
@@ -51,7 +49,11 @@ class TestController extends CI_Controller {
               //  echo '<script language="javascript">';
                 //echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
               //  echo '</script>';
-            
+            }
+            else
+            {
+                $this->load->view('bbb');
+            }
         }
         else 
         {
@@ -62,7 +64,6 @@ class TestController extends CI_Controller {
         
         
     }
-}
 }
 
 /* End of file TestController.php */
