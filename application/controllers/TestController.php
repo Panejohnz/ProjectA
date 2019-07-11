@@ -12,10 +12,10 @@ class TestController extends CI_Controller {
     }
     public function login()
     {
-        $user =  $this->input->post('usertxt');
+        $username =  $this->input->post('usertxt');
         $pass =  $this->input->post('passtxt'); 
 
-        $this->db->where('username', $user);
+        $this->db->where('username', $username);
         $this->db->where('password', $pass);
         $user = $this->db->get('users', 1);
         if($user->num_rows() > 0)
@@ -36,7 +36,30 @@ class TestController extends CI_Controller {
             redirect('/IndexController','refresh');*/
             
         }
-        else{
+        else if($user->num_rows() == 0){
+            $this->db->where('email', $username);
+            $this->db->where('password', $pass);
+            $user = $this->db->get('users',1);
+            if($user->num_rows() > 0)
+            {
+                $r = $user->row_array();
+
+            
+
+                /*echo '<br>';
+                print_r($_SESSION);*/
+                //$test = json_decode([$sess]);
+                echo '<script language="javascript">';
+                echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
+                echo '</script>';
+            }else
+            {
+                echo '<script language="javascript">';
+                echo 'alert("โง่ไอหน้าหีไม่มีรหัสแล้วเสือกกระแดะเข้า")';
+                echo '</script>';
+            }
+        }else 
+        {
             echo '<script language="javascript">';
             echo 'alert("โง่ไอหน้าหีไม่มีรหัสแล้วเสือกกระแดะเข้า")';
             echo '</script>';
