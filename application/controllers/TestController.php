@@ -46,7 +46,7 @@ class TestController extends CI_Controller {
 
             
 
-                /*echo '<br>';
+                /*echo '<br>d';
                 print_r($_SESSION);*/
                 //$test = json_decode([$sess]);
                 echo '<script language="javascript">';

@@ -38,3 +38,4 @@ class RegisController extends CI_Controller {
 
         
 }
+}
