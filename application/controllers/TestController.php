@@ -15,11 +15,7 @@ class TestController extends CI_Controller {
         $username =  $this->input->post('usertxt');
         $pass =  $this->input->post('passtxt'); 
 
-<<<<<<< HEAD
         $this->db->where('username', $username);
-=======
-        $this->db->where('email', $user);
->>>>>>> a0da86edf2ab5e870da637eb6c221515f95325b7
         $this->db->where('password', $pass);
         $user = $this->db->get('users', 1);
         if($user->num_rows() > 0)
