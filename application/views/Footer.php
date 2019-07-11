@@ -11,8 +11,6 @@
   <script src="<?php echo base_url('./vendor/select2/select2.min.js'); ?>"></script>
   <script src="<?php echo base_url('./vendor/tilt/tilt.jquery.min.js'); ?>"></script>
   <script src="<?php echo base_url('./assets/js/main.js'); ?>"></script>
-  
-
 
   <script>
     $(document).ready(function() {

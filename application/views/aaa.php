@@ -1,15 +1,15 @@
-$white: #FCFCFC;
-$gray: #CBCDD3;
-$dark: #777777;
-$error: #EF8D9C;
-$orange: #FFC39E;
-$success: #B0DB7D;
-$secondary: #99DBB4;
+<!DOCTYPE html>
+<html lang="en" >
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
-$font: 'Lato', sans-serif;
-
+<head>
+  <meta charset="UTF-8">
+  <title>Daily UI#011 | Flash Message (Error/Success)</title>
+  
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 html {
   display: grid;
   min-height: 100%;
@@ -18,7 +18,7 @@ html {
 body {
   display: grid;
   overflow: hidden;
-  font-family: $font;
+  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
@@ -36,17 +36,17 @@ h1 {
   font-weight: 100;
   letter-spacing: 3px;
   padding-top: 5px;
-  color: $white;
+  color: #FCFCFC;
   padding-bottom: 5px;
   text-transform: uppercase;
 }
 
 .green {
-  color: darken($secondary, 20%);
+  color: #4ec07d;
 }
 
 .red {
-  color: darken($error, 10%);
+  color: #e96075;
 }
 
 .alert {
@@ -58,7 +58,7 @@ p {
   margin-top: -5px;
   font-size: 0.5em;
   font-weight: 100;
-  color: darken($dark, 10%);
+  color: #5e5e5e;
   letter-spacing: 1px;
 }
 
@@ -70,10 +70,10 @@ button, .dot {
   position: absolute;
   width: 35%;
   height: 100%;
-  left: 12%;
-  background: linear-gradient(to bottom right, $success 40%, $secondary 100%);
+  left: 30%;
+  background: linear-gradient(to bottom right, #B0DB7D 40%, #99DBB4 100%);
   border-radius: 20px;
-  box-shadow: 5px 5px 20px rgba($gray, 10%);
+  box-shadow: 5px 5px 20px #cbcdd3;
   perspective: 40px;
 }
 
@@ -82,22 +82,22 @@ button, .dot {
   width: 35%;
   height: 100%;
   right: 12%;
-  background: linear-gradient(to bottom left, $error 40%, $orange 100%);
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
   border-radius: 20px;
-  box-shadow: 5px 5px 20px rgba($gray, 10%);
+  box-shadow: 5px 5px 20px #cbcdd3;
 }
 
 .dot {
   width: 8px;
   height: 8px;
-  background: $white;
+  background: #FCFCFC;
   border-radius: 50%;
   position: absolute;
   top: 4%;
   right: 6%;
-  &:hover {
-    background: darken($white, 20%);
-  }
+}
+.dot:hover {
+  background: #c9c9c9;
 }
 
 .two {
@@ -109,9 +109,9 @@ button, .dot {
   position: absolute;
   width: 22%;
   height: 22%;
-  background: $white;
+  background: #FCFCFC;
   border-radius: 50%;
-  border: 1px solid $dark;
+  border: 1px solid #777777;
   top: 21%;
   left: 37.5%;
   z-index: 2;
@@ -122,9 +122,9 @@ button, .dot {
   position: absolute;
   width: 22%;
   height: 22%;
-  background: $white;
+  background: #FCFCFC;
   border-radius: 50%;
-  border: 1px solid $dark;
+  border: 1px solid #777777;
   top: 21%;
   left: 37.5%;
   z-index: 2;
@@ -135,7 +135,7 @@ button, .dot {
   position: absolute;
   width: 5px;
   height: 5px;
-  background: $dark;
+  background: #777777;
   border-radius: 50%;
   top: 40%;
   left: 20%;
@@ -146,7 +146,7 @@ button, .dot {
 }
 
 .mouth {
-  position:absolute;
+  position: absolute;
   top: 43%;
   left: 41%;
   width: 7px;
@@ -156,14 +156,14 @@ button, .dot {
 
 .happy {
   border: 2px solid;
-  border-color: transparent $dark $dark transparent;
+  border-color: transparent #777777 #777777 transparent;
   transform: rotate(45deg);
 }
 
 .sad {
   top: 49%;
   border: 2px solid;
-  border-color: $dark transparent transparent $dark;
+  border-color: #777777 transparent transparent #777777;
   transform: rotate(45deg);
 }
 
@@ -172,7 +172,7 @@ button, .dot {
   width: 21%;
   height: 3%;
   opacity: .5;
-  background: $dark;
+  background: #777777;
   left: 40%;
   top: 43%;
   border-radius: 50%;
@@ -182,10 +182,10 @@ button, .dot {
 .scale {
   animation: scale 1s ease-in infinite;
 }
+
 .move {
   animation: move 3s ease-in-out infinite;
 }
-
 
 .message {
   position: absolute;
@@ -197,7 +197,7 @@ button, .dot {
 
 .button-box {
   position: absolute;
-  background: $white;
+  background: #FCFCFC;
   width: 50%;
   height: 15%;
   border-radius: 20px;
@@ -205,27 +205,25 @@ button, .dot {
   left: 25%;
   outline: 0;
   border: none;
-  box-shadow: 2px 2px 10px rgba($dark, .5);
+  box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
   transition: all .5s ease-in-out;
-  &:hover {
-    background: darken($white, 5%);
-    transform: scale(1.05);
-    transition: all .3s ease-in-out;
-  }
+}
+.button-box:hover {
+  background: #efefef;
+  transform: scale(1.05);
+  transition: all .3s ease-in-out;
 }
 
 @keyframes bounce {
   50% {
-     transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
-
 @keyframes scale {
   50% {
     transform: scale(0.9);
   }
 }
-
 @keyframes roll {
   0% {
     transform: rotate(0deg);
@@ -240,7 +238,6 @@ button, .dot {
     left: 25%;
   }
 }
-
 @keyframes move {
   0% {
     left: 25%;
@@ -252,7 +249,6 @@ button, .dot {
     left: 25%;
   }
 }
-
 footer {
   position: absolute;
   bottom: 0;
@@ -261,16 +257,43 @@ footer {
   font-size: 1em;
   text-transform: uppercase;
   padding: 10px;
-  font-family: $font;
-  p {
-    color: $error;
-    letter-spacing: 2px;
-  }
-  a {
-    color: $success;
-    text-decoration: none;
-    &:hover {
-      color: $orange;
-    }
-  }
+  font-family: "Lato", sans-serif;
 }
+footer p {
+  color: #EF8D9C;
+  letter-spacing: 2px;
+}
+footer a {
+  color: #B0DB7D;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #FFC39E;
+}
+
+    </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="container">
+  <div id="success-box">
+    <div class="dot"></div>
+    <div class="dot two"></div>
+    <div class="face">
+      <div class="eye"></div>
+      <div class="eye right"></div>
+      <div class="mouth happy"></div>
+    </div>
+    <div class="shadow scale"></div>
+    <div class="message"><h1 class="alert">Success!</h1><p>yay, everything is working.</p></div>
+    <button class="button-box" onclick="location.href='<?php echo base_url();?>index.php/TestController'"><h1 class="green">continue</h1></button>
+  </div>
+ 
+</body>
+
+</html>
