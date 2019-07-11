@@ -36,13 +36,8 @@
 
 					
 
-<<<<<<< HEAD
 					<div class="text-center p-t-12">
 						<a class="txt2" href="#">
-=======
-					<div class="text-center p-t-136">
-						<a class="txt2" href="<?php echo site_url("RegisController");?>">
->>>>>>> a0da86edf2ab5e870da637eb6c221515f95325b7
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
