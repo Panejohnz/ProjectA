@@ -21,9 +21,10 @@ class RegisController extends CI_Controller {
             $emailja =  $this->db->get('users',1);
             
             if($emailja->num_rows() > 0){
-                echo '<script language="javascript">';
-                echo 'alert("ไอหมอนี่มันคิดเองไม่เป็นว่าไอห่า")';
-                echo '</script>';
+                $this->load->view('bbb');
+               // echo '<script language="javascript">';
+               // echo 'alert("ไอหมอนี่มันคิดเองไม่เป็นว่าไอห่า")';
+               // echo '</script>';
             }
             else{
         

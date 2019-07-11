@@ -81,7 +81,7 @@ button, .dot {
   position: absolute;
   width: 35%;
   height: 100%;
-  right: 12%;
+  right: 35%;
   background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
   border-radius: 20px;
   box-shadow: 5px 5px 20px #cbcdd3;
