@@ -29,6 +29,7 @@ class RegisController extends CI_Controller {
             $this->insert_users->insert($data);
             echo 'Data Inserted Successfully';
     
+<<<<<<< HEAD
             
             
             
@@ -36,6 +37,9 @@ class RegisController extends CI_Controller {
     //Loading View
    // $this->load->view('Register', $data);
 
+=======
+        }
+      
+>>>>>>> a0da86edf2ab5e870da637eb6c221515f95325b7
         
-    }
 }
