@@ -3,7 +3,7 @@
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
+				<div class="login100-pic js-tilt" data-tilt style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1);">
 					<img src="<?php echo base_url(); ?>./assets/images/img-01.png" alt="IMG">
 				</div>
 
@@ -13,7 +13,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="usertxt" id="usertxt" placeholder="Username">
+						<input class="input100" type="text" name="usertxt" id="usertxt" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -44,7 +44,7 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
+						<a class="txt2" href="<?php echo site_url("RegisController");?>">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
