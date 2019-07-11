@@ -13,11 +13,11 @@
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/style.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
   <link rel = "stylesheet" type = "image/png"  href = "<?php echo base_url(); ?>./assets/images/icons/favicon.ico">
-  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./vendor/bootstrap/css/bootstrap.min.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/vendor/animate/animate.css">
-  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/vendor/css-hamburgers/hamburgers.min.css">
-  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/vendor/select2/select2.min.css">
+  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./vendor/animate/animate.css">
+  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./vendor/css-hamburgers/hamburgers.min.css">
+  <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./vendor/select2/select2.min.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/util.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/main.css">
 
