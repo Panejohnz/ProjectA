@@ -32,6 +32,7 @@ class RegisController extends CI_Controller {
             
             
             
+            
     
     //Loading View
    // $this->load->view('Register', $data);
