@@ -28,7 +28,7 @@ class RegisController extends CI_Controller {
             }
             else{
         
-            //Settingd values for tabel columns
+            //Setting values for tabel columns
             $data = array(
             'firsname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
@@ -46,7 +46,7 @@ class RegisController extends CI_Controller {
             
             
     
-    //Loading View
+    //Loadingd View
    // $this->load->view('Register', $data);
 
         
