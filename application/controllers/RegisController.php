@@ -28,7 +28,7 @@ class RegisController extends CI_Controller {
             }
             else{
         
-            //Setting values for tabel columns
+            //Settingd values for tabel columns
             $data = array(
             'firsname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
