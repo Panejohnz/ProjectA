@@ -3,7 +3,7 @@
 		<div class="wrapper" style="background-image: url('');">
 			<div class="inner">
 				<div class="image-holder">
-					<img src="<?php echo base_url(); ?>./assets/images/20526105_1387731987970238_4991988815808480099_n.jpg" alt="">
+					<img src="<?php echo base_url(); ?>./assets/images/man-156836_960_720.png" alt="">
 					</div>
 				<form method="post" action=<?php echo base_url('index.php/RegisController/Register') ?>>
 					<h3>สมัครสมาชิก</h3>
@@ -33,7 +33,7 @@
 						<i class="zmdi zmdi-lock"></i>
 					</div>
 					<div class="form-wrapper">
-						<input type="password" placeholder="Confirm Password" required class="form-control">
+						<input type="password" name="password1" placeholder="Confirm Password" required class="form-control">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
 					<div class="input-group">

@@ -11,25 +11,21 @@ class RegisController extends CI_Controller {
         $this->load->model('insert_users');
         $this->load->library('form_validation');
     }
+    
 
     public function Register()
     {
             $email = $this->input->post('email');
-
-
-            $this->db->where('email', $email);
-            $emailja =  $this->db->get('users',1);
-            
-            if($emailja->num_rows() > 0){
-                $this->load->view('bbb');
-               // echo '<script language="javascript">';
-               // echo 'alert("ไอหมอนี่มันคิดเองไม่เป็นว่าไอห่า")';
-               // echo '</script>';
+            $userr = $this->input->post('username');
+            $pass1 = $this->input->post('password');
+            $pass2 = $this->input->post('password1');
+    
+            if($pass1 != $pass2){
+               $this->load->view('bbb');
             }
-            else{
-        
-            //Settingd values for tabel columns
-            $data = array(
+
+            
+            else{$data = array(
             'firsname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
             'username' => $this->input->post('username'),
@@ -42,13 +38,24 @@ class RegisController extends CI_Controller {
             $this->insert_users->insert($data);
             $this->load->view('aaa');
         }
-            
-            
-            
+        $this->db->where('email', $email);
+        $this->db->where('username', $userr);
+            $emailja =  $this->db->get('users',1);
+            $userr =  $this->db->get('users',1);
+            if($emailja->num_rows() > 0){
+                $this->load->view('bbb1');
+           
+            }
+            else if($userr->num_rows() > 0){
+                $this->load->view('bbb1');
+            }
+    }
+    
+       
     
     //Loading View
    // $this->load->view('Register', $data);
 
         
 }
-}
+
