@@ -35,10 +35,13 @@ class TestController extends CI_Controller {
             redirect('/IndexController','refresh');*/
             
         }
+        
         if($user->num_rows() == 0){
             $this->db->where('email', $username);
             $this->db->where('password', $pass);
             $user = $this->db->get('users',1);
+        }
+
             if($user->num_rows() > 0)
             {
                 $r = $user->row_array();
@@ -54,16 +57,10 @@ class TestController extends CI_Controller {
             {
                 $this->load->view('bbb');
             }
-        }
-        else 
-        {
-          $this->load->view('bbb');
-        }
-        exit;
-        
-        
         
     }
 }
+    
+
 
 /* End of file TestController.php */

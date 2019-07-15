@@ -45,12 +45,16 @@ a:hover {
 
 .inner {
   padding: 20px;
-  background: #fff;
   max-width: 850px;
   margin: auto;
   display: flex; }
   .inner .image-holder {
-    width: 50%; }
+    width: 50%;
+     height: 10%;
+     padding-top: 100px;
+    
+     }
+    
   .inner form {
     width: 100%;
     padding-top: 36px;
