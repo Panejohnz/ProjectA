@@ -20,9 +20,23 @@
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./vendor/select2/select2.min.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/util.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/main.css">
+  <!--  -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/aos.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/jquery.timepicker.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/icomoon.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
   <!-- CSS Files -->
   <!-- CSS Just for demo purpose, don't include it in your project -->
   

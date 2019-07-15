@@ -291,7 +291,7 @@ footer a:hover {
     </div>
     <div class="shadow scale"></div>
     <div class="message"><h1 class="alert">Success!</h1><p>yay, everything is working.</p></div>
-    <button class="button-box" onclick="location.href='<?php echo base_url();?>index.php/TestController'"><h1 class="green">continue</h1></button>
+    <button class="button-box" onclick="location.href='<?php echo base_url();?>index.php/HomeController'"><h1 class="green">continue</h1></button>
   </div>
  
 </body>

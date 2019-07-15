@@ -1,4 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
 
+<head>
+  <meta charset="UTF-8">
+  
+  
+  
+      <style>
+
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+/* BODY */
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+  background-image: -webkit-linear-gradient(90deg, skyblue 0%, steelblue 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+</style>
+</head>
 		
 		<div class="wrapper" style="background-image: url('');">
 			<div class="inner">
