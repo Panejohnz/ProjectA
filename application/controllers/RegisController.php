@@ -11,12 +11,11 @@ class RegisController extends CI_Controller {
         $this->load->model('insert_users');
         $this->load->library('form_validation');
     }
-    
 
     public function Register()
     {
             $email = $this->input->post('email');
-            $userr = $this->input->post('username');
+            $userrja = $this->input->post('username');
             $pass1 = $this->input->post('password');
             $pass2 = $this->input->post('password1');
     
@@ -38,10 +37,13 @@ class RegisController extends CI_Controller {
                 $this->load->view('aaa');
             }
 
+
+            $this->db->where('email', $email);
+            $emailja =  $this->db->get('users',1);
             
            
         $this->db->where('email', $email);
-        $this->db->where('username', $userr);
+        $this->db->where('username', $userrja);
             $emailja =  $this->db->get('users',1);
             $userrja =  $this->db->get('users',1);
             if($emailja->num_rows() < 0){
@@ -56,7 +58,7 @@ class RegisController extends CI_Controller {
     
        
     
-    //Loading View
+    //Loadingd View
    // $this->load->view('Register', $data);
 
         

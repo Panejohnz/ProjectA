@@ -21,7 +21,7 @@
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/util.css">
   <link rel = "stylesheet" type = "text/css"  href = "<?php echo base_url(); ?>./assets/css1/main.css">
   <!--  -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/open-iconic-bootstrap.min.css">
+    <<link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/animate.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/owl.theme.default.min.css">

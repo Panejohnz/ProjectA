@@ -43,3 +43,12 @@
       }
     }
   </script>
+  <script>
+      function change(){
+        var val = $('#Cate').val()
+        $.get("<?=base_url('index.php/DropdownController/imaeYet/')?>"+val,
+        function (data){
+          $("#Pro").html(data)
+        })
+              }
+  </script>
