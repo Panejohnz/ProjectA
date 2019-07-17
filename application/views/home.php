@@ -47,8 +47,6 @@
                   <a class="dropdown-item" href="portfolio-single.php">Contact</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
           </ul>
         </div>
       </div>
