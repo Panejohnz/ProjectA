@@ -1,0 +1,15 @@
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class AdduserController extends CI_Controller {
+
+    public function index()
+    {
+        //$this->load->view('Header');
+        $this->load->view('adduser');
+       // $this->load->view('Footer');
+        
+       
+       
+    }
+}

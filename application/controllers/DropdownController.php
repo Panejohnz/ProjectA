@@ -6,6 +6,7 @@ class DropdownController extends CI_Controller {
     public function index()
     {
         $this->load->view('Header');
+        //$this->load->view('manage');
         $this->load->view('Dropdown');
         $this->load->view('Footer');
         

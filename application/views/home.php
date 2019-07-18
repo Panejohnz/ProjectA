@@ -43,12 +43,11 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="room.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href=<?php echo site_url("TestController");?>>Sign in</a>
                   <a class="dropdown-item" href="portfolio-single.php">Contact</a>
+                  <a class="dropdown-item" href=<?php echo site_url("TestController");?>>Sign in</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            
           </ul>
         </div>
       </div>
