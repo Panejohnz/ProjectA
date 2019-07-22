@@ -45,6 +45,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href=<?php echo site_url("manageController");?>>หลังบ้าน</a>
                   <a class="dropdown-item" href=<?php echo site_url("HomeController");?>>Sign Out</a>
+                  <a href=""><?=$this->session->userdata('message') ?></a>
                 </div>
             </li>
             

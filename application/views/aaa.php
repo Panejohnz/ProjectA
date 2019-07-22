@@ -295,5 +295,7 @@ footer a:hover {
   </div>
  
 </body>
-
+<script>
+  alert(<? $this->session->userdata ?>);
+</script>
 </html>
