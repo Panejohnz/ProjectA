@@ -39,7 +39,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="<?php echo site_url("HomeController");?>" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="solutions.php" class="nav-link">Solution</a></li>
+            <li class="nav-item"><a href= <?php echo site_url("ProductController");?> class="nav-link">Product</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="room.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
