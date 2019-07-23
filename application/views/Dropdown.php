@@ -17,7 +17,7 @@
  
 <body>
  
-<form action="<?php echo base_url('index.php/DropdownController/Dropdown')?>"  method="post" enctype="multipart/form-data" name="Add_Product" id="Add_Product" >
+<form action=""  method="post" enctype="multipart/form-data" name="Add_Product" id="Add_Product" >
  
   
   <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -35,9 +35,18 @@
       <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <td width="129" align="right" valign="middle">ประเภท :</td>
-      <td colspan="2"><label for="pro_name2"></label>
-        <input name="pro_name1" type="text" required="required" id="pro_name2" size="50"/></td>
+      <td align="right" valign="middle">ประเภทสินค้า :</td>
+      <td colspan="2">
+      <label for=""></label>
+        <select name="type_id" id="type_id" required="required">
+          <option value="">กรุณาเลือกประเภท</option>
+          <option value="1">ประเภท1</option>
+          <option value="2">ประเภท2</option>
+           
+          </option>
+           
+        </select>
+        </td>
     </tr>
     <tr>
       <td align="right" valign="middle">&nbsp;</td>
