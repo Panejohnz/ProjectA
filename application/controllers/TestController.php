@@ -27,9 +27,9 @@ class TestController extends CI_Controller {
             print_r($_SESSION);*/
             //$test = json_decode([$sess]);
             $this->load->view('aaa');
-            echo '<script language="javascript">';
-           echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
-            echo '</script>';
+            //echo '<script language="javascript">';
+          // echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
+            //echo '</script>';
             
             /*echo $test->UserID;
             console.log($test->UserID);
@@ -54,9 +54,9 @@ class TestController extends CI_Controller {
                 print_r($_SESSION);*/
                 //$test = json_decode([$sess]);
                 $this->load->view('aaa');
-                echo '<script language="javascript">';
-                echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
-                 echo '</script>';
+                //echo '<script language="javascript">';
+                //echo 'alert("ไอหมอนี่มันมีรหัสเว้ยไอห่า")';
+                // echo '</script>';
                  $data = array(
                     'message' => 'หี'
             );
