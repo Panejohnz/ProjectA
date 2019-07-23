@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
   <!-- CSS Files -->
-  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <!-- CSS Just for demo purpose, don't include it in your projectddd -->
   
   
 </head>
