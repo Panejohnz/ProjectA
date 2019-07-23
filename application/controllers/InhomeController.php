@@ -8,6 +8,7 @@ class InhomeController extends CI_Controller {
         //$this->load->view('Header');
         $this->load->view('homein');
        // $this->load->view('Footer');
+
         
        
        
