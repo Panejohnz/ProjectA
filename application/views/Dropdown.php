@@ -31,23 +31,15 @@
         <input name="pro_name" type="text" required="required" id="pro_name2" size="50"/></td>
     </tr>
     <tr>
+      <td width="129" align="right" valign="middle">เลือกประเภท :</td>
+      <td colspan="2"><label for="pro_name2"></label>
+        <input name="pro_name" type="text" required="required" id="pro_name2" size="50"/></td>
+    </tr>
+    <tr>
       <td align="right" valign="middle">&nbsp;</td>
       <td colspan="2">&nbsp;</td>
     </tr>
-    <tr>
-      <td align="right" valign="middle">ประเภทสินค้า :</td>
-      <td colspan="2">
-      <label for=""></label>
-        <select name="type_id" id="type_id" required="required">
-          <option value="">กรุณาเลือกประเภท</option>
-          <option value="1">ประเภท1</option>
-          <option value="2">ประเภท2</option>
-           
-          </option>
-           
-        </select>
-        </td>
-    </tr>
+    
     <tr>
       <td align="right" valign="middle">&nbsp;</td>
       <td colspan="2">&nbsp;</td>
@@ -86,7 +78,7 @@
     <tr>
       <td align="right" valign="middle">รูปภาพสินค้า :</td>
       <td colspan="2"><label for="pro_img"></label>
-        <input name="pro_img" type="file" required="required" id="pro_img" size="40" /></td>
+        <input name="pro_img" type="text" required="required" id="pro_img" size="40" /></td>
     </tr>
     <tr>
       <td align="right" valign="middle">&nbsp;</td>
