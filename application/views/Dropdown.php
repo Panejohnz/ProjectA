@@ -1,23 +1,84 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Add_Product</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Add_Product</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #E6E6FA;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: black
+  ;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+</head>
+ 
+<body>
+ 
+
 
 
 </head>
  
 <body>
  
-<form action=""  method="post" enctype="multipart/form-data" name="Add_Product" id="Add_Product" >
+<form action="<?php echo base_url('index.php/DropdownController/Dropdown')?>"  method="post" enctype="multipart/form-data" name="Add_Product" id="Add_Product" >
  
   
   <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -28,12 +89,16 @@
     <tr>
       <td width="129" align="right" valign="middle">ชื่อสินค้า :</td>
       <td colspan="2"><label for="pro_name2"></label>
-        <input name="pro_name" type="text" required="required" id="pro_name2" size="50"/></td>
+        <input name="pro_name1" type="text" required="required" id="pro_name1" size="50"/></td>
+    </tr>
+    <tr>
+      <td align="right" valign="middle">&nbsp;</td>
+      <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
       <td width="129" align="right" valign="middle">เลือกประเภท :</td>
       <td colspan="2"><label for="pro_name2"></label>
-        <input name="pro_name" type="text" required="required" id="pro_name2" size="50"/></td>
+        <input name="pro_name2" type="text" required="required" id="pro_name2" size="50"/></td>
     </tr>
     <tr>
       <td align="right" valign="middle">&nbsp;</td>
@@ -71,23 +136,14 @@
       <td><label for="pro_qty"></label>
         <input type="number" name="pro_qty" id="pro_qty" required="required"/></td>
     </tr>
-    <tr>
-      <td align="right" valign="middle">&nbsp;</td>
-      <td colspan="2">&nbsp;</td>
-    </tr>
-    <tr>
-      <td align="right" valign="middle">รูปภาพสินค้า :</td>
-      <td colspan="2"><label for="pro_img"></label>
-        <input name="pro_img" type="text" required="required" id="pro_img" size="40" /></td>
-    </tr>
-    <tr>
-      <td align="right" valign="middle">&nbsp;</td>
-      <td colspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <tr> <td colspan="2">
+    <button  class="btn btn-primary" onclick="location.href='<?php echo base_url();?>index.php/Image'">อัพรูป</button></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td colspan="2"><button type="submit" name="button" id="button" value="ตกลง" class="btn btn-primary">เพิ่มสินค้า</button></td>
-    </tr>
+    </tr>s
   </table> 
 </form>
 </body>

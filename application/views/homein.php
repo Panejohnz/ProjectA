@@ -1,7 +1,7 @@
 <!DOCTYPE php>
 <php lang="en">
   <head>
-    <title>อากีลูลู่</title>
+    <title>20october</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -30,7 +30,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">อากีลูลู่</a>
+        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">20october</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -45,10 +45,10 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href=<?php echo site_url("manageController");?>>หลังบ้าน</a>
                   <a class="dropdown-item" href=<?php echo site_url("HomeController");?>>Sign Out</a>
-                  <a href=""><?=$this->session->userdata('message') ?></a>
                 </div>
             </li>
-            
+            <li class="nav-item"> <a href="" class="nav-link"> Welcome <?=$this->session->userdata('message') ?></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,12 +62,12 @@
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-10 ftco-animate text-center">
               <h1 class="mb-4">
-                <strong class="typewrite" data-period="4000" data-type='["ยินดีต้อนรับครับ"]'>
+                <strong class="typewrite" data-period="4000" data-type='["ยินดีต้อนรับครับ","อิอิ","คิคิ"]'>
                   <span class="wrap"></span>
                 </strong>
               </h1>
               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-              <p><a href="https://vimeo.com/45830194" class="btn btn-primary btn-outline-white px-4 py-3 popup-vimeo"><span class="ion-ios-play mr-2"></span> Watch Video</a></p>
+              <p><a href="https://www.youtube.com/watch?v=NzDIVwJTef4" class="btn btn-primary btn-outline-white px-4 py-3 popup-vimeo"><span class="ion-ios-play mr-2"></span> Watch Video</a></p>
             </div>
           </div>
         </div>
@@ -87,8 +87,9 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry">
-              <a href="<?php echo site_url("TestController");?>" class="block-20">
+              <a href="<?php echo site_url("ProductController");?>" class="block-20">
                 <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+                
               </a>
               <div class="text p-4 d-block">
                 <div class="meta mb-3">
@@ -102,7 +103,8 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
               </a>
               <div class="text p-4">
                 <div class="meta mb-3">
@@ -116,7 +118,8 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
               </a>
               <div class="text p-4">
                 <div class="meta mb-3">
@@ -141,7 +144,7 @@
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/mild.pitchakorn"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>

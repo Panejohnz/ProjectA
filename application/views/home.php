@@ -30,7 +30,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">อากีลูลู่</a>
+        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">20october</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -335,7 +335,8 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
               </a>
               <div class="text p-4 d-block">
                 <div class="meta mb-3">
@@ -349,7 +350,8 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
               </a>
               <div class="text p-4">
                 <div class="meta mb-3">
@@ -363,7 +365,8 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
               </a>
               <div class="text p-4">
                 <div class="meta mb-3">
