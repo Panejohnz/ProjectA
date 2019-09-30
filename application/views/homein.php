@@ -1,7 +1,7 @@
 <!DOCTYPE php>
 <php lang="en">
   <head>
-    <title>Racks - Free Bootstrap 4 Template by Colorlib</title>
+    <title>อากีลูลู่</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -43,7 +43,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="room.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href=<?php echo site_url("manageController");?>>หลังบ้าน</a>
+                  <a class="dropdown-item" href=<?php echo site_url("admin");?>>หลังบ้าน</a>
                   <a class="dropdown-item" href=<?php echo site_url("HomeController");?>>Sign Out</a>
                   <a href=""><?=$this->session->userdata('message') ?></a>
                 </div>
@@ -56,13 +56,13 @@
     <!-- END nav -->
     
     <section class="home-slider owl-carousel ftco-degree-bg">
-      <div class="slider-item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="slider-item"  img src="<?php echo base_url(); ?>images/bg_1.jpg" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-10 ftco-animate text-center">
-              <h1 class="mb-4">I love to 
-                <strong class="typewrite" data-period="4000" data-type='["Design."]'>
+              <h1 class="mb-4">
+                <strong class="typewrite" data-period="4000" data-type='["ยินดีต้อนรับครับ"]'>
                   <span class="wrap"></span>
                 </strong>
               </h1>
@@ -75,255 +75,6 @@
     </section>
     <!-- END slider -->
 
-    <section class="ftco-section-featured ftco-animate">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="carousel owl-carousel">
-              <div class="item">
-                <a href="portfolio.php">
-                  <img src="images/dashboard_full_1.jpg" class="img-fluid" alt="">
-                </a>
-              </div>
-              <div class="item">
-                <a href="portfolio.php">
-                  <img src="images/dashboard_full_2.jpg" class="img-fluid" alt="">
-                </a>
-              </div>
-              <div class="item">
-                <a href="portfolio.php">
-                  <img src="images/dashboard_full_3.jpg" class="img-fluid" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-    <section class="ftco-section ftco-degree-bg">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Our Services</span>
-            <h2>Racks provides a fully featured text services platform!</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center icon-layers"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Unlimited Features</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center icon-gears"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Multiple Functions</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="align-self-center icon-paper-plane"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Advanced Visualizations</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-live_help"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Community &amp; Supports</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section-parallax ftco-degree-bg">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-              <h2 class="h1 font-weight-bold">Turn every channel into a revenue channel and drive business growth</h2>
-              <p><a href="#" class="btn btn-primary btn-outline-white mt-3 py-3 px-4">View more details</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section">
-      <div class="container-fluid">
-        <div class="row no-gutters justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Works</span>
-            <h2>Recent Works</h2>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="block-3 d-md-flex ftco-animate">
-            <a href="portfolio.php" class="image" style="background-image: url('images/work-1.jpg'); "></a>
-            <div class="text">
-              <h4 class="subheading">Illustration</h4>
-              <h2 class="heading"><a href="portfolio.php">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate">
-            <a href="portfolio.php" class="image order-2" style="background-image: url('images/work-2.jpg'); "></a>
-            <div class="text order-1">
-              <h4 class="subheading">Application</h4>
-              <h2 class="heading"><a href="portfolio.php">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate">
-            <a href="portfolio.php" class="image" style="background-image: url('images/work-3.jpg'); "></a>
-            <div class="text">
-              <h4 class="subheading">Web Design</h4>
-              <h2 class="heading"><a href="portfolio.php">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section testimony-section ftco-degree-bg">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Customer Says</span>
-            <h2>Our satisfied customer says</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Interface Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">UI Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Web Developer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">System Analytics</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="ftco-section ftco-counter ftco-degree-bg" id="section-counter">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2>Our achievements</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Customers are satisfied with our professional support</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="12000">0</strong>
-                <span>Amazing preset options to be mixed and combined</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="10000">0</strong>
-                <span>Average response time on live chat support channel</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="ftco-section ftco-degree-bg">
       <div class="container">
@@ -336,7 +87,8 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="<?php echo site_url("TestController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
               </a>
               <div class="text p-4 d-block">
                 <div class="meta mb-3">
@@ -398,12 +150,11 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Quick Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Home</a></li>
+                <li><a href="<?php echo site_url("HomeController");?>" class="py-2 d-block">Home</a></li>
                 <li><a href="#" class="py-2 d-block">About</a></li>
                 <li><a href="#" class="py-2 d-block">Services</a></li>
                 <li><a href="#" class="py-2 d-block">Portfolio</a></li>
                 <li><a href="#" class="py-2 d-block">Contact</a></li>
-                <li><a href="#" class="py-2 d-block">Privacy</a></li>
               </ul>
             </div>
           </div>
@@ -435,7 +186,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
