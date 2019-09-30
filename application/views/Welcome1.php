@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css3/animate.min.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css3/ionicons.min.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css3/styles.css" />
+    <link href="uploads/aaaa.png" rel="icon">
+  <link href="uploads/aaaa.png" rel="logos">
   </head>
   <body>
     <nav id="topNav" class="navbar navbar-default navbar-fixed-top">

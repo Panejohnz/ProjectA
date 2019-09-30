@@ -5,7 +5,7 @@
             จัดการสมาชิก
         </h1>
         <ol class="breadcrumb">
-            <li><a href="<?php echo  base_url('member'); ?>"><i class="fa fa-dashboard"></i> หน้าแรก</a></li>
+            <li><a href="<?php echo base_url('member'); ?>"><i class="fa fa-dashboard"></i> หน้าแรก</a></li>
             <li class="active">จัดการสมาชิก</li>
         </ol>
     </section>
@@ -22,14 +22,14 @@
                 <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                     <div class="row">
                         <div class="col-sm-6">
-                            <a class="btn btn-success" href="<?php echo  base_url('index.php/member/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
-                            <a class="btn btn-default" href="<?php echo  base_url('index.php/member'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
+                            <a class="btn btn-success" href="<?php echo base_url('index.php/member/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
+                            <a class="btn btn-default" href="<?php echo base_url('index.php/member'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
                         </div>
                         <div class="col-sm-6">
                             <div id="" class="dataTables_filter">
-                            <form action="" method="GET" name="search">
-                            	<label>ค้นหา</label>:<input type="search" name="keyword" class="form-control input-sm" placeholder="ค้นหาชื่อหมวดหมู่"></label>
-                            </form>
+                                <form action="" method="GET" name="search">
+                                    <label>ค้นหา</label>:<input type="search" name="keyword" class="form-control input-sm" placeholder="ค้นหาชื่อหมวดหมู่"></label>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -38,40 +38,37 @@
                             <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                                 <thead>
                                     <tr role="row">
-                                        <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width: 30%;">ชื่อ สกุล</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 30%;">ชื่อ สกุล</th>
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1">รายละเอียด</th>
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">&nbsp;</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 60px;">&nbsp;</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if(!empty($results)){ foreach ($results as $data) { ?>
-                                        <tr role="row">
-                                            <td>
-                                            <a href="<?php echo base_url('member/edit/'.$data->user_id); ?>">
-                                            <?php echo  $data->name; ?>
-                                            <?php echo $data->lastname; ?>
-                                            </a> 
-                                            <br>
-                                            username : <?php echo $data->username; ?>
-                                            </td>
-                                            <td>
-                                            
-                                            ที่อยู่ <br>
-                                            <?php echo $data->address; ?>
-                                            <br>
-                                            อีเมล์ : 
-                                            <?php echo $data->email; ?>  
-                                            เบอร์โทร : 
-                                            <?php echo $data->tel; ?> 
-                                            วันเกิด 
-                                            <?php echo $data->brithday; ?> 
+                                    <?php if (!empty($results)) {
+                                        foreach ($results as $data) { ?>
+                                            <tr role="row">
+                                                <td>
+                                                    <a href="<?php echo base_url('member/edit/' . $data->id); ?>">
+                                                        <?php echo $data->firsname; ?>
+                                                        <?php echo $data->lastname; ?>
+                                                    </a>
+                                                    <br>
+                                                    username : <?php echo $data->username; ?>
+                                                </td>
+                                                <td>
 
-                                            </td>
-                                            <td>
-                                            	<a class="btn btn-danger btn-xs" href="<?php echo  base_url('member/confrm/'.$data->user_id); ?>" role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>
-                                            </td>
-                                        </tr>
-                                    <?php } } ?>
+
+                                                    อีเมล์ :
+                                                    <?php echo $data->email; ?>
+
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger btn-xs" href="<?php echo base_url('member/confrm/' . $data->id); ?>" role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>
+                                                </td>
+                                            </tr>
+                                    <?php }
+                                    } ?>
                                 </tbody>
 
                             </table>
@@ -79,7 +76,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-5">
-                            <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Total <?php echo  $total_rows; ?> entries</div>
+                            <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Total <?php echo $total_rows; ?> entries</div>
                         </div>
                         <div class="col-sm-7">
                             <div id="example1_paginate" class="dataTables_paginate paging_simple_numbers">

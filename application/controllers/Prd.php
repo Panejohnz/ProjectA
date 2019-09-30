@@ -49,7 +49,7 @@ public function newdata()
 public function adding($value='')
 	{
 		
-            $config['upload_path'] = './uploads/';
+            $config['upload_path'] = './images/';
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['max_size']     = '2000';
 			$config['max_width'] = '2000';
@@ -78,8 +78,10 @@ public function adding($value='')
                         		'img_name'=> $this->input->post('img_name'),
                         		'img_detail'=> $this->input->post('img_detail'),
                         		'img_price'=> $this->input->post('img_price'),
-                        		'imgtype_id'=> $this->input->post('imgtype_id'),
-                        		"img"=>$filename
+								'imgtype_id'=> $this->input->post('imgtype_id'),
+								'img_stock'=> $this->input->post('img_stock'),
+								"image"=>$filename,
+								
                         	);
                         $this->db->insert('img',$arr);
 
@@ -92,6 +94,14 @@ public function adding($value='')
                         redirect('prd', 'refresh');
 
                 }
+	}
+	public function testhee()
+	{
+		
+		$this->load->model('Prd_model');
+		echo '<pre>';
+		print_r ($this->Prd_model->fetch_prd());
+		echo '</pre>';
 	}
 
 
@@ -174,9 +184,8 @@ public function update($value='')
                         		'img_detail'=> $this->input->post('img_detail'),
                         		'img_price'=> $this->input->post('img_price'),
                         		'imgtype_id'=> $this->input->post('imgtype_id'),
-                        		//'imgtype_id'=> $this->input->post('imgtype_id'),
-                        		"img"=>$this->input->post('img2')
-                        		
+                        		"image"=>$this->input->post('img2'),
+                        		'img_stock'=> $this->input->post('img_stock')
                         	);
                         $this->db->where('img_id', $this->input->post('img_id'));
                         $this->db->update('img', $arr1);
@@ -218,8 +227,8 @@ public function update($value='')
                         		'img_detail'=> $this->input->post('img_detail'),
                         		'img_price'=> $this->input->post('img_price'),
                         		'imgtype_id'=> $this->input->post('imgtype_id'),
-                        		//'imgtype_id'=> $this->input->post('imgtype_id'),
-                        		"img"=>$filename
+								"image"=>$filename,
+								'img_stock'=> $this->input->post('img_stock')
                         	);
 
                          $this->db->where('img_id', $this->input->post('img_id'));

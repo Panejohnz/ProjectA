@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>
-		20october
+		SMA
 	</title>
 	<!-- tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -42,7 +42,7 @@
 <header class="main-header">
 
 	<!-- Logo -->
-	<a href="<?php base_url(); ?>" class="logo">
+	<a href="<?php echo site_url("AdminhomeController");?>" class="logo">
 		<!-- mini logo for sidebar mini 50x50 pixels -->
 		<span class="logo-mini">
 			<b>
@@ -52,7 +52,8 @@
 		<!-- logo for regular state and mobile devices -->
 		<span class="logo-lg">
 			<b>
-				20october
+				
+				LikeSala
 			</b>
 		</span>
 	</a>
@@ -87,16 +88,27 @@
 			
 			<!-- Optionally, you can add icons to the links -->
 			<li class="<?php echo base_url('admin'); ?>">
-				<a href="<?php echo base_url('index.php/Admin'); ?>">
+				<a href="<?php echo base_url('Admin'); ?>">
 					<i class="fa fa-link">
 					</i>
 					<span>
-						- จัดการ admin 
+						- จัดการแอดมิน 
 					</span>
 				</a>
 			</li>
+
+			<li class="<?php echo base_url('orders'); ?>">
+				<a href="<?php echo site_url("orders");?>">
+					<i class="fa fa-link">
+					</i>
+					<span>
+						- ออเดอร์
+					</span>
+				</a>
+			</li>	
+
 			<li class="<?php echo base_url('member'); ?>">
-				<a href="<?php echo base_url('index.php/Member'); ?>">
+				<a href="<?php echo base_url('Member'); ?>">
 					<i class="fa fa-link">
 					</i>
 					<span>
@@ -105,7 +117,7 @@
 				</a>
 			</li>
 			<li class="<?php echo base_url('imgtype'); ?>">
-				<a href="<?php echo base_url('index.php/imgtype'); ?>">
+				<a href="<?php echo base_url('imgtype'); ?>">
 					<i class="fa fa-link">
 					</i>
 					<span>
@@ -122,7 +134,26 @@
 						- จัดการสินค้า
 					</span>
 				</a>
-			</li>	
+			</li>
+			<li class="<?php echo base_url('stock'); ?>">
+				<a href="<?php echo site_url("stock");?>">
+					<i class="fa fa-link">
+					</i>
+					<span>
+						- สินค้าใกล้หมด
+					</span>
+				</a>
+			</li>
+			<li class="<?php echo base_url('payment'); ?>">
+				<a href="<?php echo site_url("payment");?>">
+					<i class="fa fa-link">
+					</i>
+					<span>
+						- การชำระเงิน
+					</span>
+				</a>
+			</li>
+				
 		</ul><!-- /.sidebar-menu -->
 	</section>
 	<!-- /.sidebar -->

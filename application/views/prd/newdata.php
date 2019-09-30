@@ -46,11 +46,15 @@
 							<option value="">
 								เลือกข้อมูล
 							</option>
-							<?php
+							<?php 
+							$this->db->select('imgtype.*');
+							$this->db->from('imgtype');
+							$query = $this->db->get();
+							$results = $query->result_array();
 							foreach($results as $result){
 								?>
-								<option value="<?php echo $result->imgtype_id; ?>">
-									<?php echo $result->imgtype_name; ?>
+								<option value="<?php echo $result['imgtype_id']; ?>">
+									<?php echo $result['imgtype_name']; ?>
 								</option>
 								<?php
 							} ?>
@@ -74,6 +78,12 @@
 							ราคา 
 						</label> <?php echo $this->session->flashdata('err_img_price'); ?>
 						<input type="number" id="topic" class="form-control" name="img_price" value="<?php echo $this->session->flashdata('img_price'); ?>">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">
+							สต๊อก 
+						</label> <?php echo $this->session->flashdata('err_img_stock'); ?>
+						<input type="number" id="topic" class="form-control" name="img_stock" value="<?php echo $this->session->flashdata('img_stock'); ?>">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputEmail1">

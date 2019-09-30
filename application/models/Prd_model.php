@@ -13,18 +13,15 @@ class Prd_model extends CI_Model
 
 	public function record_count($keyword)
 	{
-		$this->db->like('img_detail',$keyword);
+		$this->db->like('img_name',$keyword);
 		$this->db->from('img');
 		return $this->db->count_all_results();
 	}
 
-public function fetch_prd($limit, $start, $keryword)
+public function fetch_prd()
 	{
-		$this->db->select('img.*,imgtype.imgtype_name');
+		$this->db->select('img.*');
 		$this->db->from('img');
-		$this->db->join('imgtype','imgtype.imgtype_id=img.imgtype_id');
-		$this->db->like('img_detail', $keryword);
-		$this->db->limit($limit, $start);
 		$query = $this->db->get();
 		if($query->num_rows() > 0)
 		{
@@ -32,7 +29,7 @@ public function fetch_prd($limit, $start, $keryword)
 			{
 				$data[] = $row;
 			}
-			return $data;
+			return $query->result_array();
 		}
 		return FALSE;
 	}
@@ -73,14 +70,13 @@ public function fetch_prd($limit, $start, $keryword)
 
 public function read_prd($img_id)
 	{
-		$this->db->select('img.*,imgtype.imgtype_name');
+		$this->db->select('img.*');
 		$this->db->from('img');
-		$this->db->join('imgtype','imgtype.imgtype_id=img.imgtype_id');
 		$this->db->where('img.img_id', $img_id);
 		$query = $this->db->get();
 		if($query->num_rows() > 0)
 		{
-			$data = $query->row();
+			$data = $query->row_array();
 			return $data;
 		}
 		return FALSE;
@@ -97,5 +93,7 @@ public function read_prd($img_id)
 	public function remove_prd($img_id){
 		$this->db->delete('img',array('img_id'=>$img_id));
 	}
+
+	
 
 }

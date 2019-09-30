@@ -5,7 +5,7 @@
             จัดการประเภทภาพ
         </h1>
         <ol class="breadcrumb">
-            <li><a href="<?php echo  base_url('index.php/imgtype'); ?>"><i class="fa fa-dashboard"></i> หน้าแรก</a></li>
+            <li><a href="<?php echo  base_url('imgtype'); ?>"><i class="fa fa-dashboard"></i> หน้าแรก</a></li>
             <li class="active">จัดการประเภทภาพ</li>
         </ol>
     </section>
@@ -22,8 +22,8 @@
                 <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                     <div class="row">
                         <div class="col-sm-6">
-                            <a class="btn btn-success" href="<?php echo  base_url('index.php/imgtype/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
-                            <a class="btn btn-default" href="<?php echo  base_url('index.php/imgtype'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
+                            <a class="btn btn-success" href="<?php echo  base_url('imgtype/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
+                            <a class="btn btn-default" href="<?php echo  base_url('imgtype'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
                         </div>
                         <div class="col-sm-6">
                             <div id="" class="dataTables_filter">

@@ -22,13 +22,13 @@
                 <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                     <div class="row">
                         <div class="col-sm-6">
-                            <a class="btn btn-success" href="<?php echo  base_url('index.php/prd/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
-                            <a class="btn btn-default" href="<?php echo  base_url('index.php/prd'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
+                            <a class="btn btn-success" href="<?php echo  base_url('prd/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
+                            <a class="btn btn-default" href="<?php echo  base_url('prd'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
                         </div>
                         <div class="col-sm-6">
                             <div id="" class="dataTables_filter">
                             <form action="" method="GET" name="search">
-                            	<label>ค้นหา</label>:<input type="search" name="keyword" class="form-control input-sm" placeholder="ค้นหา"></label>
+                             <label>ค้นหา</label>:<input type="search" name="keyword" class="form-control input-sm" placeholder="ค้นหา"></label>
                             </form>
                             </div>
                         </div>
@@ -41,6 +41,8 @@
                                         <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width: 20%;">ชือภาพ</th>
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1">รายละเอียดภาพ </th>
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1">ภาพ</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1">สต๊อก</th>
+                                        
 
                                         
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">&nbsp;</th>
@@ -50,28 +52,35 @@
                                     <?php if(!empty($results)){ foreach ($results as $data) { ?>
                                         <tr role="row">
                                             <td>
-                                            <a href="<?php echo base_url('prd/edit/'.$data->img_id); ?>">
-                                            <?php echo  $data->img_name; ?>
+                                            <a href="<?php echo base_url('prd/edit/'.$data['img_id']); ?>">
+                                            <?php echo  $data['img_name']; ?>
                                             </a> 
                                             <br>
                                            
                                             </td>
                                             <td>
-                                             <?php echo $data->img_detail; ?>
-                                             [ ราคา : <?php echo  $data->img_price; ?>]
+                                             <?php echo $data['img_detail']; ?>
+                                             [ ราคา : <?php echo  $data['img_price']; ?>]
                                              <br>
-                                             ประเภท : <?php echo  $data->imgtype_name; ?>
                                              </td>
                                              <td>
 
-                        <a target="_blank" href="<?php echo  base_url('uploads/'.$data->img); ?>">
+                                            <a target="_blank" href="<?php echo  base_url('images/'.$data['image']); ?>">
 
-                                             <img src="uploads/<?php echo $data->img; ?>" width="100px">
+                                             <img src="images/<?php echo $data['image']; ?>" width="100px">
                                              </a>
                                               
-                                            </td> 
+                                            </td>
                                             <td>
-                                            	<a class="btn btn-danger btn-xs" href="<?php echo  base_url('prd/confrm/'.$data->img_id); ?>" role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>
+                                            <a href="<?php echo base_url('prd/edit/'.$data['img_id']); ?>">
+                                            <?php echo  $data['img_stock']; ?>
+                                            </a> 
+                                            <br>
+                                           
+                                            </td> 
+                                            
+                                            <td>
+                                             <a class="btn btn-danger btn-xs" href="<?php echo  base_url('prd/confrm/'.$data['img_id']); ?>" role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>
                                             </td>
                                         </tr>
                                     <?php } } ?>
