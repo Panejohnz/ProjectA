@@ -5,118 +5,98 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  font-family: "Lato", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(20, 20, 20);
-  overflow-x: hidden;
-  padding-top: 20px;
+.navbar {
+  overflow: hidden;
+  background-color: #E6E6FA;
 }
 
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
+.navbar a {
+  float: left;
   font-size: 20px;
-  color: #ffffff;
-  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
   border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
   outline: none;
+  color: black
+  ;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
 }
 
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: rgb(70, 152, 207);
-  color: white;
-}
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
+.dropdown-content {
   display: none;
-  background-color: #464242;
-  padding-left: 8px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
-/* Some media queries for responsiveness */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 </style>
 </head>
 <body>
 
-<div class="sidenav">
+<div class="navbar">
   <a href="<?php echo site_url("InhomeController");?>">หน้าแรก</a>
-  <button class="dropdown-btn">สินค้า
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="">รายการสินค้า</a>
-    <a href="<?php echo site_url("DropdownController");?>">เพิ่มสินค้า</a>
-    <a href="">สต๊อกสินค้า</a>
+  <div class="dropdown">
+    <button class="dropbtn">คลังสินค้า 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="<?php echo site_url("DropdownController");?>">จัดการสินค้า</a>
+    </div>
+  </div> 
+  <a href="#home">รายชื่อลูกค้า</a>
+    <a href="#home">รายงาน</a>
+
+    <div class="dropdown">
+    <button class="dropbtn">แสดงชื่อผู้เข้าระบบ 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">จัดการร้านค้า</a>
+      <a href="#">จัดการบทบาท</a>
+      <a href="#">ออกจากระบบ</a>
+    </div>
   </div>
-  <button class="dropdown-btn">ข้อมูลผู้ใช้
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="">รายการผู้ใช้</a>
-        <a href="">เพิ่มผู้ใช้</a>
-      </div>
+    
 </div>
-
-
-<div class="main">
-  
-</div>
-
-<script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-</script>
 
 </body>
-</html> 
+</html>

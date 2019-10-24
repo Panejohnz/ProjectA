@@ -32,8 +32,15 @@ class insert_users extends CI_Model {
     public function insert($data)
     {
         $this->db->insert('users', $data);
+
+
+        
         
     }
     
+<<<<<<< HEAD
 }  
+=======
+    
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
 

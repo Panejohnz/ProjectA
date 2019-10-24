@@ -5,6 +5,7 @@ class ProductController extends CI_Controller {
 
     public function index()
     {
+<<<<<<< HEAD
         $this->load->view('header');
       
         $this->load->library('pagination');
@@ -32,4 +33,13 @@ class ProductController extends CI_Controller {
         
     }
     
+=======
+        //$this->load->view('Header');
+        $this->load->view('product');
+       // $this->load->view('Footer');
+        
+       
+       
+    }
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
 }

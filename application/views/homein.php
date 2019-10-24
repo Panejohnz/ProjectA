@@ -1,7 +1,7 @@
 <!DOCTYPE php>
 <php lang="en">
   <head>
-    <title>อากีลูลู่</title>
+    <title>20october</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -30,7 +30,11 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
+<<<<<<< HEAD
         <a class="navbar-brand" href="<?php echo site_url("InhomeController");?>">อากีลูลู่</a>
+=======
+        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">20october</a>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -39,16 +43,24 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="<?php echo site_url("InhomeController");?>" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+<<<<<<< HEAD
             <li class="nav-item"><a href="<?php echo site_url("CartController");?>" class="nav-link">Product</a></li>
+=======
+            <li class="nav-item"><a href= <?php echo site_url("ProductController");?> class="nav-link">Product</a></li>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="room.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href=<?php echo site_url("admin");?>>หลังบ้าน</a>
                   <a class="dropdown-item" href=<?php echo site_url("HomeController");?>>Sign Out</a>
-                  <a href=""><?=$this->session->userdata('message') ?></a>
                 </div>
             </li>
+<<<<<<< HEAD
             
+=======
+            <li class="nav-item"> <a href="" class="nav-link"> Welcome <?=$this->session->userdata('message') ?></a>
+            </li>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
           </ul>
         </div>
       </div>
@@ -62,12 +74,17 @@
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-10 ftco-animate text-center">
               <h1 class="mb-4">
-                <strong class="typewrite" data-period="4000" data-type='["ยินดีต้อนรับครับ"]'>
+                <strong class="typewrite" data-period="4000" data-type='["ยินดีต้อนรับครับ","อิอิ","คิคิ"]'>
                   <span class="wrap"></span>
                 </strong>
               </h1>
+<<<<<<< HEAD
               <p></p>
               <p><a href="https://www.youtube.com/watch?v=M2gtQgf7vKY" class="btn btn-primary btn-outline-white px-4 py-3 popup-vimeo"><span class="ion-ios-play mr-2"></span> Watch Video</a></p>
+=======
+              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p><a href="https://www.youtube.com/watch?v=NzDIVwJTef4" class="btn btn-primary btn-outline-white px-4 py-3 popup-vimeo"><span class="ion-ios-play mr-2"></span> Watch Video</a></p>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
             </div>
           </div>
         </div>
@@ -89,6 +106,7 @@
             <div class="blog-entry">
               <a href="<?php echo site_url("ProductController");?>" class="block-20">
                 <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+                
               </a>
               <div class="text p-4 d-block">
                 <div class="meta mb-3">
@@ -103,7 +121,11 @@
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry" data-aos-delay="100">
             <a href="<?php echo site_url("ProductController");?>" class="block-20">
+<<<<<<< HEAD
               <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+=======
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
               </a>
               <div class="text p-4">
                 <div class="meta mb-3">
@@ -118,7 +140,11 @@
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry" data-aos-delay="200">
             <a href="<?php echo site_url("ProductController");?>" class="block-20">
+<<<<<<< HEAD
               <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+=======
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
               </a>
               <div class="text p-4">
                 <div class="meta mb-3">
@@ -143,7 +169,7 @@
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/mild.pitchakorn"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>

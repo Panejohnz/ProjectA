@@ -56,11 +56,46 @@ footer {
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css2/style.css">
+<<<<<<< HEAD
 </head>
 
 <body>
     <!--::header part start::-->
     <header class="main_menu home_menu" id="headhome">
+=======
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">20october</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="<?php echo site_url("HomeController");?>" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href= <?php echo site_url("ProductController");?> class="nav-link">Product</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="room.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="portfolio-single.php">Contact</a>
+                  <a class="dropdown-item" href=<?php echo site_url("TestController");?>>Sign in</a>
+                </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+    
+    <section class="home-slider owl-carousel ftco-degree-bg">
+      <div class="slider-item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -269,6 +304,7 @@ footer {
           <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../business-apps/business-apps.html">Business Apps</a></li>
         </ul>
         </div>
+<<<<<<< HEAD
 
         <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
           <h5 class="mb-4 font-weight-bold text-uppercase">Developers</h5>
@@ -276,6 +312,54 @@ footer {
           <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/naologic">Open Source</a></li>
           <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://stackshare.io/naologic">Technology</a></li>
         </ul>
+=======
+        <div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+              </a>
+              <div class="text p-4 d-block">
+                <div class="meta mb-3">
+                  <div><a href="#">July 12, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry" data-aos-delay="100">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+              </a>
+              <div class="text p-4">
+                <div class="meta mb-3">
+                  <div><a href="#">July 12, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry" data-aos-delay="200">
+            <a href="<?php echo site_url("ProductController");?>" class="block-20">
+                <img src="<?php echo base_url(); ?>./assets/images/image_1.jpg" alt="IMG" >
+              </a>
+              <div class="text p-4">
+                <div class="meta mb-3">
+                  <div><a href="#">July 12, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              </div>
+            </div>
+          </div>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
         </div>
 
         <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">

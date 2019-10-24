@@ -146,6 +146,7 @@ table.shoping-cart-table tr td:last-child {
   font-size: 90%;
   background: #ffffff;
   padding: 10px 15px;
+<<<<<<< HEAD
 }</style>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -175,11 +176,41 @@ table.shoping-cart-table tr td:last-child {
                     <div class="m-t text-righ">
 
                         <a href="#" class="btn btn-xs btn-outline btn-primary">Basket <i class="fa fa-long-arrow-right"></i> </a>
+=======
+}
+    </style>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+    <div class="col-md-1">
+        <div class="ibox">
+            <div class="ibox-content product-box">
+                <div class="product-imitation">
+                    [ INFO ]
+                </div>
+                <div class="product-desc">
+                    <span class="product-price">
+                        $10
+                    </span>
+                    <small class="text-muted">Category</small>
+                    <a href="#" class="product-name"> Product</a>
+
+                    <div class="small m-t-xs">
+                        Many desktop publishing packages and web page editors now.
+                    </div>
+                    <div class="m-t text-righ">
+
+                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <?php } } ?>
     </div>
 </div>
+=======
+>>>>>>> 1b83fe6180c3ae1028cec312c43d8fbc92c7eaf9
