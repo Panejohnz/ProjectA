@@ -3,49 +3,49 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class TestController extends CI_Controller
 {
-
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->model('login_model');
     }
 
-public function _remap($method, $params = array())
-{
-	if (method_exists($this, $method))
-        {
+    public function _remap($method, $params = array())
+    {
+        if (method_exists($this, $method)) {
             return call_user_func_array(array($this, $method), $params);
-        }else{
-	        $this->index();	
+        } else {
+            $this->index();
         }
     }
 
-    function index()
+    public function index()
     {
         $this->load->view('Login');
         $this->load->view('Header');
         $this->load->view('Footer');
     }
 
-    function auth()
+    public function auth()
     {
-        $username = $this->input->post('usertxt', TRUE);
-        $password = $this->input->post('passtxt', TRUE);
+        $username = $this->input->post('usertxt', true);
+        $password = $this->input->post('passtxt', true);
         $validate = $this->login_model->validate($username, $password);
         if ($validate->num_rows() > 0) {
             $data  = $validate->row_array();
+            $id = $data['id'];
             $name  = $data['firsname'];
             $email = $data['email'];
-            $level = $data['status'];
+            $level = $data['status_user'];
             $sesdata = array(
+                'id' => $id,
                 'firsname'  => $name,
                 'email'     => $email,
-                'status'     => $level,
-                'logged_in' => TRUE
+                'status_user'     => $level,
+                'logged_in' => true
             );
             $this->session->set_userdata($sesdata);
             // access login for admin
-            if ($level === '1') {
+            if ($level === '1' || $level === '2') {
                 redirect('page');
 
                 // access login for staff
@@ -60,7 +60,7 @@ public function _remap($method, $params = array())
         }
     }
 
-    function logout()
+    public function logout()
     {
         $this->session->sess_destroy();
         redirect('homecontroller');

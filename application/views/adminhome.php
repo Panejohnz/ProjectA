@@ -66,7 +66,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="<?php echo site_url("AdminhomeController"); ?>">จะไม่ซื้อหน่อยหรอ</a>
+                            <a class="navbar-brand" href="<?php echo site_url("AdminhomeController"); ?>">Trial</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="menu_icon"><i class="fas fa-bars"></i></span>
                             </button>
@@ -96,7 +96,7 @@
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                             <a class="dropdown-item" href="<?php echo site_url("testcontroller/logout");?>">sing out</a>
-                                            <a class="dropdown-item" href="<?php echo site_url("Admin");?>">หลังบ้าน</a>
+                                            <a class="dropdown-item" href="<?php echo site_url("Orders");?>">หลังบ้าน</a>
                                             <a class="dropdown-item" href="#contact-home">contact</a>
                                         </div>
                                     </li>
@@ -132,7 +132,7 @@
                                     <div class="col-lg-5 col-md-8">
                                         <div class="banner_text">
                                             <div class="banner_text_iner">
-                                                <h1>สินค้าแนะนำ</h1>
+                                                <h1>Trial</h1>
                                                 <p>อิอิ</p>
                                                 <a href="<?php echo site_url("CartController/viewall");?>" class="btn_2">buy now</a>
                                             </div>
@@ -148,9 +148,9 @@
                                     <div class="col-lg-5 col-md-8">
                                         <div class="banner_text">
                                             <div class="banner_text_iner">
-                                                <h1>จะไม่ซื้อหน่อยหรอ</h1>
+                                                <h1>Trial</h1>
                                                 <p>อิอิ</p>
-                                                <a href="#" class="btn_2">buy now</a>
+                                                <a href="<?php echo site_url("CartController/viewall");?>" class="btn_2">buy now</a>
                                             </div>
                                         </div>
                                     </div>

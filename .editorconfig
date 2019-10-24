@@ -13,3 +13,8 @@ charset = utf-8
 
 # Tab indentation (no size specified)
 indent_style = tab
+root = true
+
+[*]
+indent_style = space
+indent_size = 4

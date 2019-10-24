@@ -9,7 +9,7 @@ class Page extends CI_Controller{
  
   function index(){
     //Allowing akses to admin only
-      if($this->session->userdata('status')==='1'){
+      if($this->session->userdata('status_user')==='1' || $this->session->userdata('status_user')==='2'){
           $this->load->view('adminhome');
       }else{
           echo "Access Denied";
@@ -19,7 +19,7 @@ class Page extends CI_Controller{
  
   function staff(){
     //Allowing akses to staff only
-    if($this->session->userdata('status')==='0'){
+    if($this->session->userdata('status_user')==='0'){
       $this->load->view('aaa');
     }else{
         echo "Access Denied";

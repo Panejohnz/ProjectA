@@ -22,8 +22,8 @@
                 <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                     <div class="row">
                         <div class="col-sm-6">
-                            <a class="btn btn-success" href="<?php echo base_url('index.php/member/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
-                            <a class="btn btn-default" href="<?php echo base_url('index.php/member'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
+                            <a class="btn btn-success" href="<?php echo base_url('member/newdata'); ?>" role="button"><i class="fa fa-fw fa-plus-circle"></i> เพิ่มข้อมูล</a>
+                            <a class="btn btn-default" href="<?php echo base_url('member'); ?>" role="button"><i class="fa fa-fw fa-refresh"></i> Refresh Data</a>
                         </div>
                         <div class="col-sm-6">
                             <div id="" class="dataTables_filter">
@@ -64,7 +64,7 @@
 
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-danger btn-xs" href="<?php echo base_url('member/confrm/' . $data->id); ?>" role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>
+                                                    <a class="btn btn-danger btn-xs" href="<?php echo base_url('member/confrm/' . $data->id); ?>" <?php if ($data->status_user >= 1) { ?> disabled <?php   } ?>role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>
                                                 </td>
                                             </tr>
                                     <?php }

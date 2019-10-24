@@ -18,9 +18,10 @@ class Stock_model extends CI_Model
 		return $this->db->count_all_results();
 	}
 
-public function fetch_stock()
+public function fetch_stock($limit, $start, $keryword)
 	{
-
+		$this->db->like('img_name', $keryword);
+        $this->db->limit($limit, $start);
 		$this->db->select('*');
 		$this->db->where('img_stock <','5');
 		$query = $this->db->get('img');

@@ -11,7 +11,7 @@
             	<table class="items-list col-lg-12 col-md-12 table-hover">
               	<tbody>
               	<tr>
-                  <th>&nbsp;</th>
+                
                   <th>Product name</th>
                   <th>Product price</th>
                   <th>stock</th>
@@ -22,31 +22,32 @@
                 <!--Item-->
                 <?php
             if (isset($cart) && is_array($cart) && count($cart)) {
-              $i = 1;
-              foreach ($cart as $key => $data) {
-                ?>
+                $i = 1;
+                foreach ($cart as $key => $data) {
+                    ?>
                 <tr class="item first rowid<?php echo $data['rowid'] ?>">
-                  <td class="thumb">
-                    <img src="<?php echo base_url(); ?>/images/<?php echo $data['image'] ?>" alt="<?php echo $data['id'] ?>">
-                  </td>
-                  <td class="name"><?php echo $data['name'] ?></td>
+                <td class="name"><?php echo $data['name'] ?> </td>
+                  
                   <td class="price">฿ <span class="price<?php echo $data['rowid'] ?>"><?php echo $data['price'] ?></span></td>
                   <td class="stock"><span class="stock<?php echo $data['rowid'] ?>"><?php echo $data['stock'] ?></td>
                   <td class="qnt-count">
-                     <input class="quantity qty<?php echo $data['rowid'] ?> form-control" type="number" min="0" max="<?php echo $data['stock'] ?>" value="<?php echo $data['qty'] ?>"> 
-                    <span class="Update" onclick="javascript:updateproduct('<?php echo $data['rowid'] ?>')">Update</span>
+                     <input class="quantity qty<?php echo $data['rowid'] ?> form-control" type="number" min="0" max="<?php echo $data['stock'] ?>" value="<?php echo $data['qty'] ?>">
+                     <span class="Update" onclick="javascript:updateproduct('<?php echo $data['rowid'] ?>')">Update</span>
                   </td>
                   <td class="total">฿ <span class="subtotal subtotal<?php echo $data['rowid'] ?>"><?php echo $data['subtotal'] ?></span></td>
                   <td class="delete"><i class="icon-delete" onclick="javascript:deleteproduct('<?php echo $data['rowid'] ?>')">X</i></td>
                 </tr>
             <?php
                   $i++;
-                    } }
+                }
+            }
                 ?>
                
                 <tr class="item">
                   <td class="thumb" colspan="4" align="right">&nbsp;</td>
-                  <td class="">฿ <span class="grandtotal">0</span> </td>
+                  
+                  
+            <td class="">฿ <span class="grandtotal">0</span> </td>&nbsp;
                   <td>&nbsp;</td>
                 </tr>
               </tbody></table>
@@ -60,9 +61,15 @@
   </div>
 </div>
 
+<script>
+  $("[type='number']").keypress(function (evt) {
+    evt.preventDefault();
+});
+  </script>
 
 
 <script type="text/javascript">
+
 function deleteproduct(rowid)
 {
 var answer = confirm ("Are you sure you want to delete?");
@@ -84,7 +91,7 @@ if (answer)
                         total += parseInt($(this).text());
                         $('.grandtotal').text(total);
                     });  
-                    location.reload();
+                    
                   }else{
                     $(".rowid"+rowid).remove(".rowid"+rowid); 
                     $(".cartcount").text(response);  
@@ -93,7 +100,7 @@ if (answer)
                         total += parseInt($(this).text());
                         $('.grandtotal').text(total);
                     }); 
-                   
+                   location.reload();
                   }    
                   console.log(d);     
                 }

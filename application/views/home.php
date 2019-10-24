@@ -65,7 +65,7 @@ footer {
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">จะไม่ซื้อหน่อยหรอ</a>
+                        <a class="navbar-brand" href="<?php echo site_url("HomeController");?>">Trial</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -133,7 +133,7 @@ footer {
                                 <div class="col-lg-5 col-md-8">
                                     <div class="banner_text">
                                         <div class="banner_text_iner">
-                                            <h1>สินค้าแนะนำ</h1>
+                                            <h1>Trial</h1>
                                             <p>อิอิ</p>
                                             <a href="<?php echo site_url("CartController/viewall");?>" class="btn_2">buy now</a>
                                         </div>
@@ -148,7 +148,7 @@ footer {
                                 <div class="col-lg-5 col-md-8">
                                     <div class="banner_text">
                                         <div class="banner_text_iner">
-                                            <h1>จะไม่ซื้อหน่อยหรอ</h1>
+                                            <h1>Trial</h1>
                                             <p>อิอิ</p>
                                             <a href="<?php echo site_url("CartController/viewall");?>" class="btn_2">buy now</a>
                                         </div>
@@ -221,9 +221,9 @@ footer {
   <div class="container pt-5 border-bottom" id ="contact-home">
     <div class="row">
       <div class="col-md-3 col-sm-12 mb-3 text-center">
-        <svg class="img-fluid" width="200px" height="60px" viewBox="0 0 200 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
                 <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-                <desc>Created with Sketch.</desc>
+               
                 <defs>
                   <linearGradient x1="46.3528198%" y1="45.7301342%" x2="92.3528198%" y2="93.7383901%" id="linearGradient-1">
                     <stop stop-color="#0062A5" offset="0%"></stop>

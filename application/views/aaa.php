@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <title>Daily UI#011 | Flash Message (Error/Success)</title>
   
-  
+  <script language = "javascript" type="text/javascript">
+  window.history.forward(1)
+</script>
   
       <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */

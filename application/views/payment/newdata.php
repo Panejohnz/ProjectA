@@ -1,27 +1,137 @@
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 50px 5 50px 420;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 50%;
+  padding: 12px;
+  
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+</style>
+
+
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
-	<section class="content-header">
-		<h1>
-			 ชำระเงิน
-			 
-		</h1>
-		<ol class="breadcrumb">
-			<li>
-				<a href="<?php echo base_url('payment'); ?>">
-					<i class="fa fa-dashboard">
-					</i>หน้าแรก
-				</a>
-			</li>
-			<li>
-				<a href="<?php echo base_url('payment'); ?>">
-					 การชำระเงิน
-				</a>
-			</li>
-			<li class="active">
-				เพิ่มข้อมูลใหม่
-			</li>
-		</ol>
-	</section>
+	
 	<!-- Main content -->
 	<section class="content">
 	<div class="container">
@@ -30,28 +140,38 @@
 			<div class="col-sm-7">
 		<!-- Your Page Content Here -->
 		<div class="box box-primary">
+
+		
 			<div class="box-header with-border">
 				<h3 class="box-title">
-					เพิ่มข้อมูล
+					ชำระเงิน
 				</h3>
-			</div><!-- /.box-header -->
+      </div><!-- /.box-header -->
+      
+      <img id="image" src="../images/BANK.jpg" style="width:550px" alt="logo" />
 			<!-- form start -->
 			<form role="form" action="<?php echo base_url('payment/adding'); ?>" method="post" enctype="multipart/form-data">
 				<div class="box-body">
-			
+        <?php
+            foreach ($id as $data) : ?>
 
 					<div class="form-group">
+        
 						<label for="exampleInputEmail1">
-							เลขออเดอร์
+           
+              <?php  endforeach; ?>
+                  ออเดอร์ที่
 						</label> <?php echo $this->session->flashdata('err_payname'); ?>
-						<input type="text" id="payname" class="form-control" name="payname" value="<?php echo $this->session->flashdata('payname'); ?>">
-					</div>
+						<input type="text" id="payname" class="form-control" name="payname" value="<?php echo $data['orderid'] ;  ?> <?php echo $this->session->flashdata('payname') ?>">
+          </div>
+         
+          
 					
 					
 
 					<div class="form-group">
 						<label for="exampleInputEmail1">
-							อัพโหลดไฟล์ภาพ
+							อัพโหลดสลิปการโอนเงิน
 						</label> <?php echo $this->session->flashdata('err_payment'); ?>
 						<input type="file" name="payment" id="payment" >
 					</div>
@@ -63,7 +183,7 @@
 						<i class="fa fa-fw fa-save">
 						</i>บันทึกข้อมูล
 					</button>
-					<a class="btn btn-danger" href="<?php echo base_url('payment'); ?>" role="button">
+					<a class="btn btn-danger" href="<?php echo base_url('CartController/viewall'); ?>" role="button">
 						<i class="fa fa-fw fa-close">
 						</i>ยกเลิก
 					</a>

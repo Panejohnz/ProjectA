@@ -43,6 +43,7 @@ class Member_model extends CI_Model
         //$this->tel = $this->input->post('tel');
         $this->username = $this->input->post('username');
         $this->password = $this->input->post('password');
+        $this->status_user = $this->input->post('status_user');
         //$this->description = $this->input->post('description');
         if ($user_id == NULL) {
             $this->db->insert('users', $this);

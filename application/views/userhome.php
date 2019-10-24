@@ -34,10 +34,8 @@ footer {
 }
     </style>
 <head>
-<script language = "javascript" type="text/javascript">
-  window.history.forward(1);
-</script>
-  
+ 
+   
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -69,7 +67,7 @@ footer {
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="<?php echo site_url("userController");?>">จะไม่ซื้อหน่อยหรอ</a>
+                        <a class="navbar-brand" href="<?php echo site_url("userController");?>">Trial</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -99,11 +97,12 @@ footer {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.php" id="navbarDropdown_2"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Welcome <?php echo $this->session->userdata('firsname');?>
+                                        Welcome <?php echo $this->session->userdata('firsname');?> 
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                         <a class="dropdown-item" href="<?php echo site_url("testcontroller/logout");?>">sing out</a>
                                         <a class="dropdown-item" href="#contact-home">contact</a>
+                                        <a class="dropdown-item" href="<?php echo site_url("historyController/history");?>">ประวัติ</a>
                                         
                                     </div>
                                 </li>
@@ -138,9 +137,9 @@ footer {
                                 <div class="col-lg-5 col-md-8">
                                     <div class="banner_text">
                                         <div class="banner_text_iner">
-                                            <h1>สินค้าแนะนำ</h1>
+                                            <h1>Trial</h1>
                                             <p>อิอิ</p>
-                                            <a href="#" class="btn_2">buy now</a>
+                                            <a href="<?php echo site_url("CartController/viewall");?>" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -153,9 +152,9 @@ footer {
                                 <div class="col-lg-5 col-md-8">
                                     <div class="banner_text">
                                         <div class="banner_text_iner">
-                                            <h1>จะไม่ซื้อหน่อยหรอ</h1>
+                                            <h1>Trial</h1>
                                             <p>อิอิ</p>
-                                            <a href="#" class="btn_2">buy now</a>
+                                            <a href="<?php echo site_url("CartController/viewall");?>" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>

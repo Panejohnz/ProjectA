@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
   <meta charset="UTF-8">
@@ -70,11 +70,11 @@
       position: relative;
       top: 80px;
       display: inline-block;
-      -webkit-animation: bounce 3s ease infinite alternate;
+      -webkit-animation:  3s ease infinite alternate;
       font-size: 80px;
-      color: #BA55D3;
-      text-shadow: 0 1px 0 #9400D3, 0 2px 0 #9400D3, 0 3px 0 #9400D3, 0 4px 0 #9400D3,
-        0 5px 0 #9400D3, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+      color: #000;
+      text-shadow: 0 1px 0 #000, 0 2px 0 #000, 0 3px 0 #000, 0 4px 0 #000,
+        0 5px 0 #000, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
         0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
     }
 
@@ -130,7 +130,7 @@
               <span>N</span>
             </h1>
           </span>
-
+      
           <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
             <input class="input100" type="text" name="usertxt" id="usertxt" placeholder="Username" required class="form-control">
             <span class="focus-input100"></span>
@@ -145,16 +145,23 @@
             <span class="symbol-input100">
               <i class="fa fa-lock" aria-hidden="true"></i>
             </span>
-          </div><input type="checkbox" onclick="myFunction()">Show Password
+          </div><input type="checkbox" onclick="myFunction()">Show Password 
 
           <div class="container-login100-form-btn">
+          
             <button class="login100-form-btn">
               Login
             </button>
           </div>
-
-         <?php echo $this->session->flashdata('msg');?>
+          <?php echo $this->session->flashdata('msg');?>
          
+          <div class="facebook-btn">
+            <a class="loginface-form-btn" href="<?php echo site_url("user_authentication"); ?>">
+              Login Facebook
+     </a>
+     
+          </div>
+        
           <div class="text-center p-t-136">
             <a class="txt2" href="<?php echo site_url("RegisController"); ?>">
               Create your Account

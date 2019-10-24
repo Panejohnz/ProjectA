@@ -48,7 +48,7 @@
                     (max width: 540px, max height: 100px)
                 </div>
                 <img id="image" src="../images/logos.png" style="width:50px" alt="logo" />
-                <h5><div>*กรุณาจำเลขออเดอร์เพื่อยืนยันการชำระเงิน</div></h5>
+                <h5><div>*กดที่เลขออเดอร์เพื่อยืนยันการชำระเงิน</div></h5>
             </div>
 
         </div>
@@ -63,9 +63,9 @@
 
                 <tr>
 
-                    <td class="meta-head">ID</td>
+                    <td class="meta-head" >ID </td>
                     
-                    <td>#<?php echo $id + 1?></td>
+                    <td> <a href="<?php echo site_url('payment/newdata'); ?>">#<?php echo $id + 1?> </a></td>
                 
 
                     
@@ -96,7 +96,7 @@
                             </div>
                         </td>
                         <td><?php echo $item['quantity'] ?></td>
-                        <td><?php echo $item['price'] * $item['quantity'] ?>
+                        <td><?php echo $item['price']?>
                         </td>
 
                         <td>

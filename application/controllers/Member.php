@@ -51,6 +51,7 @@ class Member extends CI_Controller
 			// $this->form_validation->set_rules('brithday', 'วันเกิด', 'required', array('required'=> 'ค่าห้ามว่าง!'));
 			$this->form_validation->set_rules('username', 'username', 'required', array('required' => 'ค่าห้ามว่าง!'));
 			$this->form_validation->set_rules('password', 'password', 'required', array('required' => 'ค่าห้ามว่าง!'));
+			$this->form_validation->set_rules('status_user', 'status_user', 'required', array('required' => 'ค่าห้ามว่าง!'));
 
 			if ($this->form_validation->run() == TRUE) {
 				$this->session->set_flashdata(
@@ -71,6 +72,7 @@ class Member extends CI_Controller
 					//'error_brithday' => form_error('brithday'),
 					'error_username' => form_error('username'),
 					'error_password' => form_error('password'),
+					'error_status_user' => form_error('status_user'),
 
 					'firsname' => set_value('firsname'),
 					'lastname' => set_value('lastname'),
@@ -80,7 +82,8 @@ class Member extends CI_Controller
 					// 'tel' => set_value('tel'),
 					// 'brithday' => set_value('brithday'),
 					'username' => set_value('username'),
-					'password' => set_value('password')
+					'password' => set_value('password'),
+					'status_user' => set_value('status_user')
 
 				);
 				$this->session->set_flashdata($data);

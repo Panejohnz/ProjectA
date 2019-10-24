@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -18,8 +18,8 @@ body {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: skyblue;
-  background-image: -webkit-linear-gradient(90deg, skyblue 0%, steelblue 100%);
+  background-color: rgb(245, 245, 245);
+  background-image: rgb(245, 245, 245);
   background-attachment: fixed;
   background-size: 100% 100%;
   overflow: hidden;
@@ -40,11 +40,13 @@ body {
 						<input type="text" placeholder="Last Name" name="lastname" required class="form-control">
 					</div>
 					<div class="form-wrapper">
-						<input type="text" placeholder="Username" name="username" required class="form-control">
+						<input type="text" placeholder="Username" name="username" id="username" required class="form-control">
+						<span id="username_result"></span>  
 						<i class="zmdi zmdi-account"></i>
 					</div>
 					<div class="form-wrapper">
-						<input type="email" placeholder="Email Address"name="email"  required class="form-control">
+						<input type="email" placeholder="Email Address " id ="email" name="email"  required class="form-control"/>
+						<span id="email_result"></span>  
 						<i class="zmdi zmdi-email"></i>
 					</div>
 					<div class="form-wrapper">
@@ -69,3 +71,38 @@ body {
 				</form>
 			</div>
 		</div>
+		</html>
+<script>  
+ $(document).ready(function(){  
+      $('#email').change(function(){  
+           var email = $('#email').val();  
+           if(email != '')  
+           {  
+                $.ajax({  
+                     url:"<?php echo base_url(); ?>RegisController/checkmail",  
+                     method:"POST",  
+                     data:{email:email},  
+                     success:function(data){  
+                          $('#email_result').html(data);  
+                     }  
+                });  
+           }  
+      });  
+ });  
+ $(document).ready(function(){  
+      $('#username').change(function(){  
+           var username = $('#username').val();  
+           if(username != '')  
+           {  
+                $.ajax({  
+                     url:"<?php echo base_url(); ?>RegisController/checkusername",  
+                     method:"POST",  
+                     data:{username:username},  
+                     success:function(data){  
+                          $('#username_result').html(data);  
+                     }  
+                });  
+           }  
+      });  
+ });  
+ </script>  

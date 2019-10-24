@@ -52,9 +52,9 @@
                                     <?php if(!empty($results)){ foreach ($results as $data) { ?>
                                         <tr role="row">
                                             <td>
-                                            <a href="<?php echo base_url('payment/edit/'.$data['payid']); ?>">
+                                            
                                             <?php echo  $data['payname']; ?>
-                                            </a> 
+                                            
                                             <br>
                                            
                                             </td>

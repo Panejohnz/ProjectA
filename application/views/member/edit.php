@@ -83,6 +83,27 @@
 						<div class="form-group">
 							<div class="col-sm-4">
 								<label for="exampleInputEmail1">
+									Status
+								</label>
+								<?php // echo $this->session->flashdata('error_gender')
+								?>
+
+								<select name="status_user" id="status_user">
+									<option value="<?php echo $result->status_user ?>">
+										เลื่อนตำแหน่ง
+
+									</option>
+									
+									<option value="2">พนักงาน</option>
+
+								</select>
+
+							</div>
+
+						</div>
+						<div class="form-group">
+							<div class="col-sm-4">
+								<label for="exampleInputEmail1">
 									เพศ
 								</label>
 								<?php // echo $this->session->flashdata('error_gender')

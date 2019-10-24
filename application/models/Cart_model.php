@@ -51,21 +51,15 @@ class Cart_model extends CI_Model
 
     public function getJoinOrder($data)
     {
-     
       if ($data == null){
         $data = 1;
       }
+    
+
       $query = $this->db->query("SELECT * FROM orders 
       JOIN order_detail ON order_detail.orderid = orders.id
       JOIN img ON img.img_id = order_detail.productid
       WHERE customerid = $data");
-        return $query->result_array();
-
-
-      
+      return $query->result_array();
     }
-
-
-
-
 }

@@ -1,13 +1,3 @@
-<!DOCTYPE HTML>
-<html lang="eng">
-
-<head>
-    <meta charset="UTF-8">
-</head>
-
-<body>
-
-</body>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -45,7 +35,7 @@
 
         <div id="identity">
 
-            <?php
+        <?php
             foreach ($name as $data) { ?>
 
                 <p> <?php echo  'ชื่อ : ' . $data->name; ?></p>
@@ -55,111 +45,99 @@
 
             <?php }
             ?>
-        </div>
-        <div id="logo">
+
+            <div id="logo">
 
 
-            <div id="logohelp">
-                <input id="imageloc" type="text" size="50" value="" /><br />
-                (max width: 540px, max height: 100px)
+                <div id="logohelp">
+                    <input id="imageloc" type="text" size="50" value="" /><br />
+                    (max width: 540px, max height: 100px)
+                </div>
+                <img id="image" src="../images/logos.png" style="width:50px" alt="logo" />
+                <h5><div></div></h5>
             </div>
-            <img id="image" src="../images/logos.png" style="width:50px" alt="logo" />
-            <h5>
-                <div>*กรุณาจำเลขออเดอร์เพื่อยืนยันการชำระเงิน</div>
-            </h5>
+
         </div>
 
-    </div>
+        <div style="clear:both"></div>
 
-    <div style="clear:both"></div>
+        <div id="customer">
 
-    <div id="customer">
+            <label id="customer-title">SMA</label>
 
-        <label id="customer-title">SMA</label>
+            <table id="meta">
 
-        <table id="meta">
+                <tr>
+
+                    <td class="meta-head">ID</td>
+                    <?php
+                    foreach ($result as $data) { ?>
+                        <td>#<?php echo $data->orderid; break; ?> </td>
+                    
+                <?php } ?>
+                
+
+                    
+                </tr>
+                
+                
+            </table>
+
+        </div>
+
+        <table id="items">
 
             <tr>
-
-                <td class="meta-head">ID</td>
-                <?php
-                foreach ($result as $data) { ?>
-                    <td>#<?php echo $data->orderid ?></td>
-
-                <?php }
-                ?>
-
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Date</th>
 
             </tr>
+            <?php if ($bill != null) {
+                        foreach ($bill as $item) { ?>
+                    <tr class="item">
+                        <td class="item-name">
+                            <div class="delete-wpr">
+                                <?php echo $item['img_name'] ?>
+                                <!-- <a class="delete" href="javascript:;" title="Remove row">X</a> -->
+                            </div>
+                        </td>
+                        <td><?php echo $item['quantity'] ?></td>
+                        <td><?php echo $item['price'] * $item['quantity'] ?>
+                        </td>
 
+                        <td>
+                            <img class="image" src="<?php echo base_url(); ?>/images/<?php echo $item['image'] ?>" width="100" height="50">
+                        </td>
+                        <td><?php echo $item['date'] ?></td>
 
-        </table>
+                    </tr>
+                  
+                       
+                <?php }
+                    } else { ?>
 
-    </div>
+                <tr>
+                    <td colspan="5">
+                        <p>No items in your cart...</p>
+                    </td>
+                </tr>
 
-    <table id="items">
+            <?php } ?>
+</table>
+                    <table>
+                    <td class="meta-total">Total</td>
 
-        <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Image</th>
-            <th>Date</th>
-
-        </tr>
-
-
-        <tr class="item">
-            <td class="item-name">
-                <div class="delete-wpr">
-                    <?php
-                    foreach ($productid as $data) { ?>
-            <td><?php echo $data->productid  ?></td>
-        <?php }
-        ?>
-        <!-- <a class="delete" href="javascript:;" title="Remove row">X</a> -->
+                    <td><?php echo $total?></td>
+                    </table>
+        <div id="terms">
+            <h5>ITEM</h5>
         </div>
-        </td>
-        <?php
-        foreach ($result as $data) { ?>
-
-            <td><?php echo $data->quantity ?></td>
-            <td><?php echo $data->price ?>
-            </td>
-        <?php }
-        ?>
-        <td>
-            <?php foreach ($productid as $data) { ?>
-                <img class="image" src="<?php echo base_url(); ?>/image/<?php echo $data->image ?>" width="100" height="50">
-            <?php }
-            ?>
-        </td>
-        <?php foreach ($name as $data) { ?>
-            <td><?php echo $data->date ?></td>
-        <?php }
-        ?>
-        </tr>
-
-
-        }
-
-
-
-    </table>
-    <table>
-        <td class="meta-total">Total</td>
-        <?php foreach ($result as $data) { ?>
-
-            <td><?php echo $data->price ?></td>
-        <?php }
-        ?>
-    </table>
-    <div id="terms">
-        <h5>ITEM</h5>
-    </div>
-    <input type="button" value="Back" onclick="window.location.href='<?php echo site_url('CartController/viewall'); ?>'" />
-    <input type="button" class="btn btn--radius-2 btn--red" value="Print" onclick="window.print() " />
-    </form>
+        <input type="button" value="Back" onclick="window.location.href='<?php echo site_url('CartController/viewall'); ?>'" />
+        <input type="button" class="btn btn--radius-2 btn--red" value="Print" onclick="window.print() " />
+        </form>
 
     </div>
 

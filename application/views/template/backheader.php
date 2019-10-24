@@ -87,15 +87,7 @@
 		<ul class="sidebar-menu">
 			
 			<!-- Optionally, you can add icons to the links -->
-			<li class="<?php echo base_url('admin'); ?>">
-				<a href="<?php echo base_url('Admin'); ?>">
-					<i class="fa fa-link">
-					</i>
-					<span>
-						- จัดการแอดมิน 
-					</span>
-				</a>
-			</li>
+			
 
 			<li class="<?php echo base_url('orders'); ?>">
 				<a href="<?php echo site_url("orders");?>">
@@ -150,6 +142,15 @@
 					</i>
 					<span>
 						- การชำระเงิน
+					</span>
+				</a>
+			</li>
+			<li class="<?php echo base_url('sendcontroller'); ?>">
+				<a href="<?php echo site_url("sendcontroller");?>">
+					<i class="fa fa-link">
+					</i>
+					<span>
+						- ส่งของ
 					</span>
 				</a>
 			</li>

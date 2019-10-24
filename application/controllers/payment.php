@@ -38,9 +38,12 @@ class payment extends CI_Controller
 public function newdata()
 	{
 		$data['results'] = $this->Imgtype_model->fetch_imgtype(0,0,'');
-		$this->load->view('template/backheader');
+		//$this->load->view('template/backheader');
+		$data['id'] = $this->Payment_model->getid();
+        //print_r($data);
+        
 		$this->load->view('payment/newdata',$data);
-		$this->load->view('template/backfooter');
+		//$this->load->view('template/backfooter');
 	}
 
 
@@ -88,7 +91,8 @@ public function adding($value='')
 					)
 				);
 
-                        redirect('payment', 'refresh');
+						//redirect('payment', 'refresh');
+						$this->load->view('userhome');
 
                 }
 	}
@@ -251,14 +255,14 @@ public function update($value='')
 
 
 
-	public function edit($img_id)
-	{
-		$data['results'] = $this->Imgtype_model->fetch_imgtype(0,0,'');
-		$data['doc'] = $this->Payment_model->read_payment($img_id);
-		$this->load->view('template/backheader');
-		$this->load->view('payment/edit',$data);
-		$this->load->view('template/backfooter');
-	}
+// 	public function edit($img_id)
+// 	{
+// 		$data['results'] = $this->Imgtype_model->fetch_imgtype(0,0,'');
+// 		$data['doc'] = $this->Payment_model->read_payment($img_id);
+// 		$this->load->view('template/backheader');
+// 		$this->load->view('payment/edit',$data);
+// 		$this->load->view('template/backfooter');
+// 	}
 
 
 
@@ -266,23 +270,23 @@ public function update($value='')
 
 
 
-	public function confrm($img_id)
-	{
-		$data = array
-		(
-			'backlink'  => 'payment',
-			'deletelink'=> 'payment/remove/' . $img_id
-		);
-		$this->load->view('template/backheader');
-		$this->load->view('confrm',$data);
-		$this->load->view('template/backfooter');
-	}
+// 	public function confrm($img_id)
+// 	{
+// 		$data = array
+// 		(
+// 			'backlink'  => 'payment',
+// 			'deletelink'=> 'payment/remove/' . $img_id
+// 		);
+// 		$this->load->view('template/backheader');
+// 		$this->load->view('confrm',$data);
+// 		$this->load->view('template/backfooter');
+// 	}
 
-	public function remove($img_id)
-	{
-		$this->Payment_model->remove_payment($img_id);
-		redirect('payment','refresh');
-	}
+// 	public function remove($img_id)
+// 	{
+// 		$this->Payment_model->remove_payment($img_id);
+// 		redirect('payment','refresh');
+// 	}
 
 
-}
+ }

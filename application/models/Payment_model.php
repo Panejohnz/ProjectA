@@ -18,8 +18,10 @@ class Payment_model extends CI_Model
 		return $this->db->count_all_results();
 	}
 
-public function fetch_payment()
+public function fetch_payment($limit, $start, $keryword)
 	{
+		$this->db->like('payname',$keryword);
+		$this->db->limit($limit, $start);
 		$this->db->select('payment.*');
 		$this->db->from('payment');
 		$query = $this->db->get();
@@ -32,6 +34,17 @@ public function fetch_payment()
 			return $query->result_array();
 		}
 		return FALSE;
+	}
+	public function getid(){
+		$this->session->userdata('logged_in');
+        $user_id = $this->session->userdata('id');
+        $query = $this->db->query("SELECT * from order_detail
+        JOIN orders ON orders.id = order_detail.orderid
+        JOIN customers ON customers.id = orders.customerid
+        JOIN users ON users.id = customers.id_users
+        where users.id = $user_id");
+       
+        return $query->result_array();
 	}
 
 

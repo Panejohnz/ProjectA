@@ -18,8 +18,10 @@ class Prd_model extends CI_Model
 		return $this->db->count_all_results();
 	}
 
-public function fetch_prd()
-	{
+public function fetch_prd($limit, $start, $keryword)
+	{	
+		$this->db->like('img_name', $keryword);
+        $this->db->limit($limit, $start);
 		$this->db->select('img.*');
 		$this->db->from('img');
 		$query = $this->db->get();

@@ -71,6 +71,15 @@
 
                                 </div>
                                 <div class="form-group">
+							<div class="col-sm-4">
+								<label for="exampleInputEmail1">
+									status
+								</label> <?php echo $this->session->flashdata('error_status_user') ?>
+								<input  type="status_user" id="status_user" class="form-control" name="status_user"  value="0">
+							</div>
+
+						</div>
+                                <div class="form-group">
                                     <div class="col-sm-4">
                                         <label for="exampleInputEmail1">
                                             เพศ

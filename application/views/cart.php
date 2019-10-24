@@ -83,7 +83,7 @@
     img {
       display: block;
       max-width: 100%;
-      height: auto;
+      height: 200px;
       vertical-align: middle;
     }
 
@@ -159,7 +159,7 @@
 </head>
 
 <body>
-<?php echo $this->session->userdata('firsname');?>
+
   <div class="container">
     <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" onclick="javascript:opencart()">
       <span>
@@ -190,30 +190,33 @@
 
 
   <div class="container catalog-grid">
-    <div class="row" id="HeeGrace"> 
+    <div class="row" id="Heace"> 
       <?php
       if (isset($member_list) && is_array($member_list) && count($member_list)) {
-        $i = 1;
-        foreach ($member_list as $key => $data) {
-          ?>
+          $i = 1;
+          foreach ($member_list as $key => $data) {
+              ?>
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="tile">
               <div class="price-label price<?php echo $data['img_id'] ?>" rel="<?php echo $data['img_price'] ?>">฿ <?php echo $data['img_price'] ?></div>
-              <img class="image<?php echo $data['img_id'] ?>" rel="<?php echo $data['image'] ?>" src="<?php echo base_url(); ?>/images/<?php echo $data['image'] ?>" alt="<?php echo $data['img_id'] ?>">
+              <img class="image<?php echo $data['img_id'] ?>" rel="<?php echo $data['image'] ?>" src="<?php echo base_url(); ?>/images/<?php echo $data['image'] ?>" alt="<?php echo $data['img_id'] ?>" >
               <span class="tile-overlay"></span>
               <div class="footer">
-                <p class="name<?php echo $data['img_id'] ?>" rel="<?php echo $data['img_id'] ?>"><?php echo $data['img_id'] ?></p>
+           
+                <p class="name<?php echo $data['img_id'] ?>" rel="<?php echo $data['img_id'] ?>"><?php echo $data['img_name'] ?></p>
                 <p class="stock<?php echo $data['img_id'] ?>" rel="<?php echo $data['img_stock'] ?>">สินค้าเหลือ :
-                  <?php if ($data['img_stock'] == 0)
-                        echo '<span style="color:#FF0000;text-align:center;">0</span>';
-                      else echo  $data['img_stock'].' ชิ้น'?> </p>
-                <button class="btn btn-primary"  <?php if ($data['img_stock'] == 0){ ?> disabled <?php   } ?> onclick="javascript:addtocart(<?php echo $data['img_id']?>)">Add to Cart</button>
+                  <?php if ($data['img_stock'] <= 0) {
+                  echo '<span style="color:#FF0000;text-align:center;">0</span>';
+              } else {
+                  echo  $data['img_stock'].' ชิ้น';
+              } ?> </p>
+                <button class="btn btn-primary"  <?php if ($data['img_stock'] <= 0) { ?> disabled <?php   } ?> onclick="javascript:addtocart(<?php echo $data['img_id']?>)">Add to Cart</button>
               </div>
             </div>
           </div>
       <?php
           $i++;
-        }
+          }
       }
       ?>
     </div>
@@ -229,7 +232,7 @@
 
       $.post("<?= base_url('searchcontroller/search') ?>", $("#keyword").serialize(),
         function(data) {
-          $('#HeeGrace').html(data);
+          $('#Heace').html(data);
         }
       );
       event.preventDefault();
@@ -243,7 +246,9 @@
       var name = $('.name' + p_id).text();
       var id = $('.name' + p_id).attr('rel');
       var stock = $('.stock' + p_id).attr('rel');
-
+      var answer = confirm ("Are you sure you want to add " + name + " ?");
+if (answer)
+{
       $.ajax({
         type: "POST",
         url: "<?php echo site_url('CartController/add'); ?>",
@@ -254,7 +259,7 @@
 
       });
     }
-
+    }
 
     function opencart() {
       $.ajax({

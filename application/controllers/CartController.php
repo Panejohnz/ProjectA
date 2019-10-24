@@ -14,9 +14,9 @@ class CartController extends CI_Controller
     $this->load->model('Cart_model');
     $this->load->library('pagination'); // โหลด pagination library
 
-    // if(!$this->session->userdata('firsname')){ //ดัก user บังคับล็อกอิน
-    //   redirect('TestController');
-    // }
+     if(!$this->session->userdata('firsname')){ //ดัก user บังคับล็อกอิน
+       redirect('TestController');
+   }
 
   }
 

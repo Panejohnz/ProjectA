@@ -40,6 +40,7 @@
                                     <tr role="row">
                                         <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width: 20%;">ชือภาพ</th>
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1">รายละเอียดภาพ </th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1">ประเภทสินค้า </th>
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1">ภาพ</th>
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1">สต๊อก</th>
                                         
@@ -63,6 +64,9 @@
                                              [ ราคา : <?php echo  $data['img_price']; ?>]
                                              <br>
                                              </td>
+                                             <td>
+                                             <?php echo $data['imgtype_id']; ?>
+                                    </td>
                                              <td>
 
                                             <a target="_blank" href="<?php echo  base_url('images/'.$data['image']); ?>">
